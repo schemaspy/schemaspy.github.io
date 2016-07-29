@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<database name="Chinook" schema="dbo" type="Microsoft SQL Server - 11.00.3128">
+   <tables>
+      <table catalog="Chinook" name="Album" numRows="347" remarks="Album table is main object in our database, each album has relation to **[Artist]** table" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="AlbumId" nullable="false" remarks="Album table is main object in our database, each album has relation to **[Artist]** table [Invoice.Total]" size="4" type="int">
+            <child catalog="Chinook" column="AlbumId" foreignKey="FK_TrackAlbumId" implied="false" onDeleteCascade="false" schema="dbo" table="Track"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="Title" nullable="false" remarks="" size="320" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="ArtistId" nullable="false" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="ArtistId" foreignKey="FK_AlbumArtistId" implied="false" onDeleteCascade="false" schema="dbo" table="Artist"/>
+         </column>
+         <primaryKey column="AlbumId" sequenceNumberInPK="1"/>
+         <index name="PK_Album" unique="true">
+            <column ascending="true" name="AlbumId"/>
+         </index>
+         <index name="IFK_AlbumArtistId" unique="false">
+            <column ascending="true" name="ArtistId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="AlbumsArtists" remarks="" schema="dbo" type="VIEW" viewSql="CREATE VIEW dbo.AlbumsArtists&#13;&#10;AS&#13;&#10;SELECT        dbo.Album.Title AS Album, dbo.Artist.Name AS Artist&#13;&#10;FROM            dbo.Album INNER JOIN&#13;&#10;                         dbo.Artist ON dbo.Album.ArtistId = dbo.Artist.ArtistId&#13;&#10;">
+         <column autoUpdated="false" digits="0" id="0" name="Album" nullable="false" remarks="" size="320" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="1" name="Artist" nullable="true" remarks="" size="240" type="nvarchar"/>
+      </table>
+      <table catalog="Chinook" name="Artist" numRows="275" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="ArtistId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="ArtistId" foreignKey="FK_AlbumArtistId" implied="false" onDeleteCascade="false" schema="dbo" table="Album"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="Name" nullable="true" remarks="" size="240" type="nvarchar"/>
+         <primaryKey column="ArtistId" sequenceNumberInPK="1"/>
+         <index name="PK_Artist" unique="true">
+            <column ascending="true" name="ArtistId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="Customer" numRows="59" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="CustomerId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="CustomerId" foreignKey="FK_InvoiceCustomerId" implied="false" onDeleteCascade="false" schema="dbo" table="Invoice"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="FirstName" nullable="false" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="LastName" nullable="false" remarks="" size="40" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="3" name="Company" nullable="true" remarks="" size="160" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="Address" nullable="true" remarks="" size="140" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="City" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="6" name="State" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="7" name="Country" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="8" name="PostalCode" nullable="true" remarks="" size="20" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="9" name="Phone" nullable="true" remarks="" size="48" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="10" name="Fax" nullable="true" remarks="" size="48" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="11" name="Email" nullable="false" remarks="" size="120" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="12" name="SupportRepId" nullable="true" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="EmployeeId" foreignKey="FK_CustomerSupportRepId" implied="false" onDeleteCascade="false" schema="dbo" table="Employee"/>
+         </column>
+         <primaryKey column="CustomerId" sequenceNumberInPK="1"/>
+         <index name="PK_Customer" unique="true">
+            <column ascending="true" name="CustomerId"/>
+         </index>
+         <index name="IFK_CustomerSupportRepId" unique="false">
+            <column ascending="true" name="SupportRepId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="Employee" numRows="8" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="EmployeeId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="SupportRepId" foreignKey="FK_CustomerSupportRepId" implied="false" onDeleteCascade="false" schema="dbo" table="Customer"/>
+            <child catalog="Chinook" column="ReportsTo" foreignKey="FK_EmployeeReportsTo" implied="false" onDeleteCascade="false" schema="dbo" table="Employee"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="LastName" nullable="false" remarks="" size="40" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="FirstName" nullable="false" remarks="" size="40" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="3" name="Title" nullable="true" remarks="" size="60" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="ReportsTo" nullable="true" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="EmployeeId" foreignKey="FK_EmployeeReportsTo" implied="false" onDeleteCascade="false" schema="dbo" table="Employee"/>
+         </column>
+         <column autoUpdated="false" digits="3" id="5" name="BirthDate" nullable="true" remarks="" size="16" type="datetime"/>
+         <column autoUpdated="false" digits="3" id="6" name="HireDate" nullable="true" remarks="" size="16" type="datetime"/>
+         <column autoUpdated="false" digits="0" id="7" name="Address" nullable="true" remarks="" size="140" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="8" name="City" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="9" name="State" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="10" name="Country" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="11" name="PostalCode" nullable="true" remarks="" size="20" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="12" name="Phone" nullable="true" remarks="" size="48" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="13" name="Fax" nullable="true" remarks="" size="48" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="14" name="Email" nullable="true" remarks="" size="120" type="nvarchar"/>
+         <primaryKey column="EmployeeId" sequenceNumberInPK="1"/>
+         <index name="PK_Employee" unique="true">
+            <column ascending="true" name="EmployeeId"/>
+         </index>
+         <index name="IFK_EmployeeReportsTo" unique="false">
+            <column ascending="true" name="ReportsTo"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="Genre" numRows="25" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="GenreId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="GenreId" foreignKey="FK_TrackGenreId" implied="false" onDeleteCascade="false" schema="dbo" table="Track"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="Name" nullable="true" remarks="" size="240" type="nvarchar"/>
+         <primaryKey column="GenreId" sequenceNumberInPK="1"/>
+         <index name="PK_Genre" unique="true">
+            <column ascending="true" name="GenreId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="Invoice" numRows="412" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="InvoiceId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="InvoiceId" foreignKey="FK_InvoiceLineInvoiceId" implied="false" onDeleteCascade="false" schema="dbo" table="InvoiceLine"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="CustomerId" nullable="false" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="CustomerId" foreignKey="FK_InvoiceCustomerId" implied="false" onDeleteCascade="false" schema="dbo" table="Customer"/>
+         </column>
+         <column autoUpdated="false" digits="3" id="2" name="InvoiceDate" nullable="false" remarks="" size="16" type="datetime"/>
+         <column autoUpdated="false" digits="0" id="3" name="BillingAddress" nullable="true" remarks="" size="140" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="4" name="BillingCity" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="5" name="BillingState" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="6" name="BillingCountry" nullable="true" remarks="" size="80" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="7" name="BillingPostalCode" nullable="true" remarks="" size="20" type="nvarchar"/>
+         <column autoUpdated="false" digits="2" id="8" name="Total" nullable="false" remarks="" size="12" type="numeric"/>
+         <primaryKey column="InvoiceId" sequenceNumberInPK="1"/>
+         <index name="PK_Invoice" unique="true">
+            <column ascending="true" name="InvoiceId"/>
+         </index>
+         <index name="IFK_InvoiceCustomerId" unique="false">
+            <column ascending="true" name="CustomerId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="InvoiceLine" numRows="2240" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="InvoiceLineId" nullable="false" remarks="" size="4" type="int"/>
+         <column autoUpdated="false" digits="0" id="1" name="InvoiceId" nullable="false" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="InvoiceId" foreignKey="FK_InvoiceLineInvoiceId" implied="false" onDeleteCascade="false" schema="dbo" table="Invoice"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="TrackId" nullable="false" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="TrackId" foreignKey="FK_InvoiceLineTrackId" implied="false" onDeleteCascade="false" schema="dbo" table="Track"/>
+         </column>
+         <column autoUpdated="false" digits="2" id="3" name="UnitPrice" nullable="false" remarks="" size="12" type="numeric"/>
+         <column autoUpdated="false" digits="0" id="4" name="Quantity" nullable="false" remarks="" size="4" type="int"/>
+         <primaryKey column="InvoiceLineId" sequenceNumberInPK="1"/>
+         <index name="PK_InvoiceLine" unique="true">
+            <column ascending="true" name="InvoiceLineId"/>
+         </index>
+         <index name="IFK_InvoiceLineInvoiceId" unique="false">
+            <column ascending="true" name="InvoiceId"/>
+         </index>
+         <index name="IFK_InvoiceLineTrackId" unique="false">
+            <column ascending="true" name="TrackId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="MediaType" numRows="5" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="MediaTypeId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="MediaTypeId" foreignKey="FK_TrackMediaTypeId" implied="false" onDeleteCascade="false" schema="dbo" table="Track"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="Name" nullable="true" remarks="" size="240" type="nvarchar"/>
+         <primaryKey column="MediaTypeId" sequenceNumberInPK="1"/>
+         <index name="PK_MediaType" unique="true">
+            <column ascending="true" name="MediaTypeId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="Playlist" numRows="18" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="PlaylistId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="PlaylistId" foreignKey="FK_PlaylistTrackPlaylistId" implied="false" onDeleteCascade="false" schema="dbo" table="PlaylistTrack"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="Name" nullable="true" remarks="" size="240" type="nvarchar"/>
+         <primaryKey column="PlaylistId" sequenceNumberInPK="1"/>
+         <index name="PK_Playlist" unique="true">
+            <column ascending="true" name="PlaylistId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="PlaylistTrack" numRows="8715" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="PlaylistId" nullable="false" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="PlaylistId" foreignKey="FK_PlaylistTrackPlaylistId" implied="false" onDeleteCascade="false" schema="dbo" table="Playlist"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="TrackId" nullable="false" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="TrackId" foreignKey="FK_PlaylistTrackTrackId" implied="false" onDeleteCascade="false" schema="dbo" table="Track"/>
+         </column>
+         <primaryKey column="PlaylistId" sequenceNumberInPK="1"/>
+         <primaryKey column="TrackId" sequenceNumberInPK="2"/>
+         <index name="PK_PlaylistTrack" unique="true">
+            <column ascending="true" name="PlaylistId"/>
+            <column ascending="true" name="TrackId"/>
+         </index>
+         <index name="IFK_PlaylistTrackTrackId" unique="false">
+            <column ascending="true" name="TrackId"/>
+         </index>
+      </table>
+      <table catalog="Chinook" name="Track" numRows="3503" remarks="" schema="dbo" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="TrackId" nullable="false" remarks="" size="4" type="int">
+            <child catalog="Chinook" column="TrackId" foreignKey="FK_InvoiceLineTrackId" implied="false" onDeleteCascade="false" schema="dbo" table="InvoiceLine"/>
+            <child catalog="Chinook" column="TrackId" foreignKey="FK_PlaylistTrackTrackId" implied="false" onDeleteCascade="false" schema="dbo" table="PlaylistTrack"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="Name" nullable="false" remarks="" size="400" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="AlbumId" nullable="true" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="AlbumId" foreignKey="FK_TrackAlbumId" implied="false" onDeleteCascade="false" schema="dbo" table="Album"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="3" name="MediaTypeId" nullable="false" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="MediaTypeId" foreignKey="FK_TrackMediaTypeId" implied="false" onDeleteCascade="false" schema="dbo" table="MediaType"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="4" name="GenreId" nullable="true" remarks="" size="4" type="int">
+            <parent catalog="Chinook" column="GenreId" foreignKey="FK_TrackGenreId" implied="false" onDeleteCascade="false" schema="dbo" table="Genre"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="5" name="Composer" nullable="true" remarks="" size="440" type="nvarchar"/>
+         <column autoUpdated="false" digits="0" id="6" name="Milliseconds" nullable="false" remarks="" size="4" type="int"/>
+         <column autoUpdated="false" digits="0" id="7" name="Bytes" nullable="true" remarks="" size="4" type="int"/>
+         <column autoUpdated="false" digits="2" id="8" name="UnitPrice" nullable="false" remarks="" size="12" type="numeric"/>
+         <primaryKey column="TrackId" sequenceNumberInPK="1"/>
+         <index name="PK_Track" unique="true">
+            <column ascending="true" name="TrackId"/>
+         </index>
+         <index name="IFK_TrackAlbumId" unique="false">
+            <column ascending="true" name="AlbumId"/>
+         </index>
+         <index name="IFK_TrackGenreId" unique="false">
+            <column ascending="true" name="GenreId"/>
+         </index>
+         <index name="IFK_TrackMediaTypeId" unique="false">
+            <column ascending="true" name="MediaTypeId"/>
+         </index>
+      </table>
+   </tables>
+</database>
