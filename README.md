@@ -8,8 +8,8 @@ Want to contribute? Great! Simply submit a pull request. We'll review it and mer
 ## Getting Started
 
 Several options are available to get started quickly:
-* [Download the latest release on GitHub schemaspy/schemaspy.org](https://github.com/schemaspy/schemaspy.org)
-* Fork the repo `https://github.com/schemaspy/schemaspy.org`
+* [Download the latest release on GitHub schemaspy/schemaspy.github.io](https://github.com/schemaspy/schemaspy.github.io)
+* Fork the repo `https://github.com/schemaspy/schemaspy.github.io`
 
 ## Developing Using Source Files
 
@@ -23,7 +23,7 @@ If you need to update the plugins included with this template, simply run the fo
 
 ## Bugs and Issues
 
-Have a bug or an issue with this page? [Open a new issue](https://github.com/schemaspy/schemaspy.org/issues) here on GitHub.
+Have a bug or an issue with this page? [Open a new issue](https://github.com/schemaspy/schemaspy.github.io/issues) here on GitHub.
 
 ## Creator
 
