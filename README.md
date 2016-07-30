@@ -1,13 +1,15 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Agency](http://startbootstrap.com/template-overviews/agency/)
+# [schemaspy.org](http://schemaspy.org/)
 
-[Agency](http://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
+Contributing
+------------
+
+Want to contribute? Great! Simply submit a pull request. We'll review it and merge it if accepted.
 
 ## Getting Started
 
 Several options are available to get started quickly:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/agency/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-agency.git`
-* Fork the repo
+* [Download the latest release on GitHub schemaspy/schemaspy.org](https://github.com/schemaspy/schemaspy.org)
+* Fork the repo `https://github.com/schemaspy/schemaspy.org`
 
 ## Developing Using Source Files
 
@@ -21,17 +23,14 @@ If you need to update the plugins included with this template, simply run the fo
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-agency/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/agency/).
+Have a bug or an issue with this page? [Open a new issue](https://github.com/schemaspy/schemaspy.org/issues) here on GitHub.
 
 ## Creator
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+Start Bootstrap was created by and is maintained by **[Rafał Kasa](malito:rafalkasa@gmail.com)**
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+* https://github.com/rafalkasa
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+schemaspy.org is based on the # [Start Bootstrap - Agency](http://startbootstrap.com/template-overviews/agency/) web page template created by [David Miller](http://davidmiller.io/).
 
 ## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE) license.
