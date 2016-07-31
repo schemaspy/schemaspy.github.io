@@ -198,6 +198,12 @@ fieldset[disabled] .btn-xl.active {
   font-family: "Indie Flower", "Helvetica Neue", Helvetica, Arial, cursive;
   font-size: 45px;
 }
+.logo-text-dark {
+  color: white;
+  font-family: "Indie Flower", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-size: 45px;
+  color: inherit;
+}
 @media (min-width: 768px) {
   .navbar-custom {
     background-color: transparent;
@@ -760,4 +766,9 @@ body {
 }
 .margin-top-50 {
   margin-top: 5.0em;
+}
+pre.console {
+  background: #555;
+  color: white;
+  margin-bottom: 20px;
 }
