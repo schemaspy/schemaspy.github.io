@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chinook Database</title>
+  <title>chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -46,7 +46,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="index.html" class="navbar-brand"><b>Chinook</b> Database</a>
+          <a href="index.html" class="navbar-brand"><b>chinook</b> Database</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -78,10 +78,10 @@
       <section class="content-header">
         <h1>Tables</h1></br>
 		<div class="callout callout-info"> 		
-			<h4>SchemaSpy Analysis of Chinook.dbo</h4>
-			<p>Generated on Pt lip 29 14:56 CEST 2016</p>
+			<h4>SchemaSpy Analysis of chinook.public</h4>
+			<p>Generated on Pn sie 01 22:25 CEST 2016</p>
 		</div>
-        <a href="Chinook.dbo.xml" title="XML Representation">XML Representation</a></br>
+        <a href="chinook.public.xml" title="XML Representation">XML Representation</a></br>
 		<a href="insertionOrder.txt" title="Useful for loading data into a database">Insertion Order</a>
         <a href="deletionOrder.txt" title="Useful for purging data from a database">Deletion Order</a>	
       </section>
@@ -93,7 +93,7 @@
 			  <span class="label label-primary pull-right"><i class="fa fa-cog fa-2x"></i></span>			  
 			</div><!-- /.box-header -->
 			<div class="box-body">
-			  <p>Database Type: Microsoft SQL Server - 11.00.3128</p>			  
+			  <p>Database Type: PostgreSQL - 9.5.3</p>			  
 			</div><!-- /.box-body -->
 		</div>
 		<div class="box box-primary">
@@ -121,7 +121,7 @@
 				  <td class="detail" align="right">3</td>
 				  <td class="detail" align="right">347</td>
 				  <td class="detail" align="right">Table</td>
-				  <td class="comment detail" style="display: table-cell;"><p>Album table is main object in our database, each album has relation to <strong><a href="./tables/Artist.html">Artist</a></strong> table</p></td>
+				  <td class="comment detail" style="display: table-cell;"><p>This is comment for database on PostgresSQL <a href="./tables/Invoice.html">Invoice</a> link is also working</p></td>
 				  </tr>
 				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/AlbumsArtists.html">AlbumsArtists</a></td>
 				  <td class="detail" align="right">0</td>
@@ -169,7 +169,18 @@
 				  <td class="detail" align="right">9</td>
 				  <td class="detail" align="right">412</td>
 				  <td class="detail" align="right">Table</td>
-				  <td class="comment detail" style="display: table-cell;"></td>
+				  <td class="comment detail" style="display: table-cell;"><h1>Markdown syntax example</h1>
+<h2><strong><a href="./tables/Invoice.html">Invoice</a></strong> table</h2>
+<h3>Important column is <a href="./tables/Invoice.html#Total">Invoice.Total</a></h3>
+<p>Text attributes <em>italic</em>, <em>italic</em>, <strong>bold</strong>, <strong>bold</strong>, <code>monospace</code>.</p>
+<h2>Horizontal rule:</h2>
+<p>Bullet list:</p>
+<ul>
+  <li><strong><a href="./tables/Artist.html">Artist</a></strong></li>
+  <li><em><a href="./tables/Track.html#Bytes">Track.Bytes</a></em></li>
+  <li><a href="./tables/Playlist.html">Playlist</a></li>
+</ul>
+<p>A link to: <a href="http://schemaspy.org">Schema Spy 6.0</a>.</p></td>
 				  </tr>
 				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/InvoiceLine.html">InvoiceLine</a></td>
 				  <td class="detail" align="right">0</td>

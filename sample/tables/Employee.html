@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chinook Database</title>
+  <title>chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -46,7 +46,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../index.html" class="navbar-brand"><b>Chinook</b> Database</a>
+          <a href="../index.html" class="navbar-brand"><b>chinook</b> Database</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -108,8 +108,8 @@
 				<tbody>
 				<tr>
 				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="EmployeeId">EmployeeId</span></td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -141,8 +141,8 @@
 				</tr>
 				<tr>
 				 <td><span id="LastName">LastName</span></td>
-				 <td>nvarchar</td>
-				 <td>40</td>
+				 <td>varchar</td>
+				 <td>20</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -158,8 +158,8 @@
 				</tr>
 				<tr>
 				 <td><span id="FirstName">FirstName</span></td>
-				 <td>nvarchar</td>
-				 <td>40</td>
+				 <td>varchar</td>
+				 <td>20</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -175,8 +175,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Title">Title</span></td>
-				 <td>nvarchar</td>
-				 <td>60</td>
+				 <td>varchar</td>
+				 <td>30</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -192,8 +192,8 @@
 				</tr>
 				<tr>
 				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ReportsTo">ReportsTo</span></td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -217,8 +217,8 @@
 				</tr>
 				<tr>
 				 <td><span id="BirthDate">BirthDate</span></td>
-				 <td>datetime</td>
-				 <td>16</td>
+				 <td>timestamp</td>
+				 <td>29</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -234,8 +234,8 @@
 				</tr>
 				<tr>
 				 <td><span id="HireDate">HireDate</span></td>
-				 <td>datetime</td>
-				 <td>16</td>
+				 <td>timestamp</td>
+				 <td>29</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -251,8 +251,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Address">Address</span></td>
-				 <td>nvarchar</td>
-				 <td>140</td>
+				 <td>varchar</td>
+				 <td>70</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -268,8 +268,8 @@
 				</tr>
 				<tr>
 				 <td><span id="City">City</span></td>
-				 <td>nvarchar</td>
-				 <td>80</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -285,8 +285,8 @@
 				</tr>
 				<tr>
 				 <td><span id="State">State</span></td>
-				 <td>nvarchar</td>
-				 <td>80</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -302,8 +302,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Country">Country</span></td>
-				 <td>nvarchar</td>
-				 <td>80</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -319,8 +319,8 @@
 				</tr>
 				<tr>
 				 <td><span id="PostalCode">PostalCode</span></td>
-				 <td>nvarchar</td>
-				 <td>20</td>
+				 <td>varchar</td>
+				 <td>10</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -336,8 +336,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Phone">Phone</span></td>
-				 <td>nvarchar</td>
-				 <td>48</td>
+				 <td>varchar</td>
+				 <td>24</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -353,8 +353,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Fax">Fax</span></td>
-				 <td>nvarchar</td>
-				 <td>48</td>
+				 <td>varchar</td>
+				 <td>24</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -370,8 +370,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Email">Email</span></td>
-				 <td>nvarchar</td>
-				 <td>120</td>
+				 <td>varchar</td>
+				 <td>60</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -387,7 +387,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='15 columns'>Table contained <span id="recordNumber">8</span> rows at Pt lip 29 14:56 CEST 2016<p/>
+				<p title='15 columns'>Table contained <span id="recordNumber">8</span> rows at Pn sie 01 22:25 CEST 2016<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -452,17 +452,17 @@
             <div class="tab-content no-padding">            
 				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="319,5,473,152">
-<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,275,541">
+<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="331,5,485,152">
+<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,287,541">
 </map>
 
 					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/Employee.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
 				</div>
 				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="319,5,473,152">
-<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,275,541">
-<area shape="rect" id="node3" href="Invoice.html" title="Invoice" alt="" coords="517,8,667,96">
+<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="331,5,485,152">
+<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,287,541">
+<area shape="rect" id="node3" href="Invoice.html" title="Invoice" alt="" coords="529,8,679,96">
 </map>
 
 					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/Employee.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							

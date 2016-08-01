@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chinook Database</title>
+  <title>chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -46,7 +46,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../index.html" class="navbar-brand"><b>Chinook</b> Database</a>
+          <a href="../index.html" class="navbar-brand"><b>chinook</b> Database</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -77,6 +77,33 @@
           <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>Invoice</h1></br>
+		<div class="box box-primary">
+            <div class="box-header with-border">
+              <i class="fa fa-file-text-o"></i>
+              <h3 class="box-title">Description</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>			  
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body clearfix">
+				<p><h1>Markdown syntax example</h1>
+<h2><strong><a href="./../tables/Invoice.html">Invoice</a></strong> table</h2>
+<h3>Important column is <a href="./../tables/Invoice.html#Total">Invoice.Total</a></h3>
+<p>Text attributes <em>italic</em>, <em>italic</em>, <strong>bold</strong>, <strong>bold</strong>, <code>monospace</code>.</p>
+<h2>Horizontal rule:</h2>
+<p>Bullet list:</p>
+<ul>
+  <li><strong><a href="./../tables/Artist.html">Artist</a></strong></li>
+  <li><em><a href="./../tables/Track.html#Bytes">Track.Bytes</a></em></li>
+  <li><a href="./../tables/Playlist.html">Playlist</a></li>
+</ul>
+<p>A link to: <a href="http://schemaspy.org">Schema Spy 6.0</a>.</p></p>              
+            </div>
+            <!-- /.box-body -->
+		</div>
 		      </section>
       <!-- Main content -->
       <section class="content">
@@ -108,8 +135,8 @@
 				<tbody>
 				<tr>
 				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="InvoiceId">InvoiceId</span></td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -133,8 +160,8 @@
 				</tr>
 				<tr>
 				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="CustomerId">CustomerId</span></td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -154,12 +181,12 @@
 				   </tr>
 				  </table>					 
 				 </td>
-				 <td></td>
+				 <td><p>This comment is for column if you want you can jump to <a href="./../tables/Track.html#TrackId">Track.TrackId</a></p></td>
 				</tr>
 				<tr>
 				 <td><span id="InvoiceDate">InvoiceDate</span></td>
-				 <td>datetime</td>
-				 <td>16</td>
+				 <td>timestamp</td>
+				 <td>29</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -175,8 +202,8 @@
 				</tr>
 				<tr>
 				 <td><span id="BillingAddress">BillingAddress</span></td>
-				 <td>nvarchar</td>
-				 <td>140</td>
+				 <td>varchar</td>
+				 <td>70</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -192,8 +219,8 @@
 				</tr>
 				<tr>
 				 <td><span id="BillingCity">BillingCity</span></td>
-				 <td>nvarchar</td>
-				 <td>80</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -209,8 +236,8 @@
 				</tr>
 				<tr>
 				 <td><span id="BillingState">BillingState</span></td>
-				 <td>nvarchar</td>
-				 <td>80</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -226,8 +253,8 @@
 				</tr>
 				<tr>
 				 <td><span id="BillingCountry">BillingCountry</span></td>
-				 <td>nvarchar</td>
-				 <td>80</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -243,8 +270,8 @@
 				</tr>
 				<tr>
 				 <td><span id="BillingPostalCode">BillingPostalCode</span></td>
-				 <td>nvarchar</td>
-				 <td>20</td>
+				 <td>varchar</td>
+				 <td>10</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -261,7 +288,7 @@
 				<tr>
 				 <td><span id="Total">Total</span></td>
 				 <td>numeric</td>
-				 <td>12</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -277,7 +304,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='9 columns'>Table contained <span id="recordNumber">412</span> rows at Pt lip 29 14:56 CEST 2016<p/>
+				<p title='9 columns'>Table contained <span id="recordNumber">412</span> rows at Pn sie 01 22:25 CEST 2016<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -342,9 +369,9 @@
             <div class="tab-content no-padding">            
 				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="Invoice.html" title="Invoice" alt="" coords="204,32,496,365">
+<area shape="rect" id="node1" href="Invoice.html" title="Invoice" alt="" coords="204,32,508,365">
 <area shape="rect" id="node2" href="Customer.html" title="Customer" alt="" coords="5,64,160,211">
-<area shape="rect" id="node3" href="InvoiceLine.html" title="InvoiceLine" alt="" coords="540,5,704,181">
+<area shape="rect" id="node3" href="InvoiceLine.html" title="InvoiceLine" alt="" coords="552,5,716,181">
 </map>
 
 					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/Invoice.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
@@ -353,9 +380,9 @@
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
 <area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="199,37,353,184">
 <area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="5,69,155,157">
-<area shape="rect" id="node3" href="Invoice.html" title="Invoice" alt="" coords="397,5,689,339">
-<area shape="rect" id="node4" href="InvoiceLine.html" title="InvoiceLine" alt="" coords="733,137,897,313">
-<area shape="rect" id="node5" href="Track.html" title="Track" alt="" coords="463,356,624,444">
+<area shape="rect" id="node3" href="Invoice.html" title="Invoice" alt="" coords="397,5,701,339">
+<area shape="rect" id="node4" href="InvoiceLine.html" title="InvoiceLine" alt="" coords="745,137,909,313">
+<area shape="rect" id="node5" href="Track.html" title="Track" alt="" coords="469,356,630,444">
 </map>
 
 					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/Invoice.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							

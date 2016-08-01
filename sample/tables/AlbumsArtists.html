@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chinook Database</title>
+  <title>chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -46,7 +46,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../index.html" class="navbar-brand"><b>Chinook</b> Database</a>
+          <a href="../index.html" class="navbar-brand"><b>chinook</b> Database</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -107,10 +107,10 @@
 				</thead>
 				<tbody>
 				<tr>
-				 <td><span id="Album">Album</span></td>
-				 <td>nvarchar</td>
-				 <td>320</td>
-				 <td title=''></td>
+				 <td><span id="album">album</span></td>
+				 <td>varchar</td>
+				 <td>160</td>
+				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td>
@@ -124,9 +124,9 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="Artist">Artist</span></td>
-				 <td>nvarchar</td>
-				 <td>240</td>
+				 <td><span id="artist">artist</span></td>
+				 <td>varchar</td>
+				 <td>120</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -142,7 +142,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='2 columns'>Table contained <span id="recordNumber">-1</span> rows at Pt lip 29 14:56 CEST 2016<p/>
+				<p title='2 columns'>Table contained <span id="recordNumber">-1</span> rows at Pn sie 01 22:25 CEST 2016<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -158,7 +158,7 @@
 			  </div>
 			</div>	
 			<div class="box-body">
-				<textarea id="code" name="code" rows="" style="display: none;">CREATE VIEW dbo.AlbumsArtists&#13;&#10;AS&#13;&#10;SELECT        dbo.Album.Title AS Album, dbo.Artist.Name AS Artist&#13;&#10;FROM            dbo.Album INNER JOIN&#13;&#10;                         dbo.Artist ON dbo.Album.ArtistId = dbo.Artist.ArtistId</textarea>
+				<textarea id="code" name="code" rows="" style="display: none;">SELECT &quot;Album&quot;.&quot;Title&quot; AS album,&#10;    &quot;Artist&quot;.&quot;Name&quot; AS artist&#10;   FROM &quot;Album&quot;,&#10;    &quot;Artist&quot;&#10;  WHERE (&quot;Artist&quot;.&quot;ArtistId&quot; = &quot;Album&quot;.&quot;ArtistId&quot;);</textarea>
 				<div style="padding-top: 5px;"><hr></div>
 				<div class="box box-solid">
 					<div class="box-header with-border">
@@ -168,9 +168,8 @@
 					<!-- /.box-header -->
 					<div class="box-body">
 					  <ul class="list-unstyled">
-						<li><a href="AlbumsArtists.html">AlbumsArtists</a></li>
-						<li><a href="Artist.html">Artist</a></li>
 						<li><a href="Album.html">Album</a></li>
+						<li><a href="Artist.html">Artist</a></li>
 					  </ul>
 					</div>
 					<!-- /.box-body -->

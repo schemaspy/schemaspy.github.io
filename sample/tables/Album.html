@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chinook Database</title>
+  <title>chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -46,7 +46,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../index.html" class="navbar-brand"><b>Chinook</b> Database</a>
+          <a href="../index.html" class="navbar-brand"><b>chinook</b> Database</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -89,7 +89,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body clearfix">
-				<p><p>Album table is main object in our database, each album has relation to <strong><a href="./../tables/Artist.html">Artist</a></strong> table</p></p>              
+				<p><p>This is comment for database on PostgresSQL <a href="./../tables/Invoice.html">Invoice</a> link is also working</p></p>              
             </div>
             <!-- /.box-body -->
 		</div>
@@ -124,8 +124,8 @@
 				<tbody>
 				<tr>
 				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="AlbumId">AlbumId</span></td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -145,12 +145,12 @@
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				  </table>					 
 				 </td>
-				 <td><p>Album table is main object in our database, each album has relation to <strong><a href="./../tables/Artist.html">Artist</a></strong> table <a href="./../tables/Invoice.html#Total">Invoice.Total</a></p></td>
+				 <td></td>
 				</tr>
 				<tr>
 				 <td><span id="Title">Title</span></td>
-				 <td>nvarchar</td>
-				 <td>320</td>
+				 <td>varchar</td>
+				 <td>160</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -166,8 +166,8 @@
 				</tr>
 				<tr>
 				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ArtistId">ArtistId</span></td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -191,7 +191,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='3 columns'>Table contained <span id="recordNumber">347</span> rows at Pt lip 29 14:56 CEST 2016<p/>
+				<p title='3 columns'>Table contained <span id="recordNumber">347</span> rows at Pn sie 01 22:25 CEST 2016<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -256,22 +256,22 @@
             <div class="tab-content no-padding">            
 				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="Album.html" title="Album" alt="" coords="187,32,409,189">
+<area shape="rect" id="node1" href="Album.html" title="Album" alt="" coords="187,32,401,189">
 <area shape="rect" id="node2" href="Artist.html" title="Artist" alt="" coords="5,93,143,211">
-<area shape="rect" id="node3" href="Track.html" title="Track" alt="" coords="453,5,615,211">
+<area shape="rect" id="node3" href="Track.html" title="Track" alt="" coords="445,5,607,211">
 </map>
 
 					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/Album.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
 				</div>
 				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="Album.html" title="Album" alt="" coords="187,5,409,163">
+<area shape="rect" id="node1" href="Album.html" title="Album" alt="" coords="187,5,401,163">
 <area shape="rect" id="node2" href="Artist.html" title="Artist" alt="" coords="5,67,143,184">
-<area shape="rect" id="node3" href="InvoiceLine.html" title="InvoiceLine" alt="" coords="662,69,826,157">
-<area shape="rect" id="node4" href="Track.html" title="Track" alt="" coords="453,119,615,324">
-<area shape="rect" id="node6" href="Genre.html" title="Genre" alt="" coords="233,285,363,373">
-<area shape="rect" id="node7" href="MediaType.html" title="MediaType" alt="" coords="219,180,377,268">
-<area shape="rect" id="node5" href="PlaylistTrack.html" title="PlaylistTrack" alt="" coords="659,175,829,263">
+<area shape="rect" id="node3" href="InvoiceLine.html" title="InvoiceLine" alt="" coords="654,69,818,157">
+<area shape="rect" id="node4" href="Track.html" title="Track" alt="" coords="445,119,607,324">
+<area shape="rect" id="node6" href="Genre.html" title="Genre" alt="" coords="229,285,359,373">
+<area shape="rect" id="node7" href="MediaType.html" title="MediaType" alt="" coords="215,180,373,268">
+<area shape="rect" id="node5" href="PlaylistTrack.html" title="PlaylistTrack" alt="" coords="651,175,821,263">
 </map>
 
 					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/Album.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							

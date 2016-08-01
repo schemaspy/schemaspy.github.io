@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chinook Database</title>
+  <title>chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -46,7 +46,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="index.html" class="navbar-brand"><b>Chinook</b> Database</a>
+          <a href="index.html" class="navbar-brand"><b>chinook</b> Database</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -102,34 +102,12 @@
 				</thead>
 				<tbody>
 				<tr>
-				 <td>Track</td>
-				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>AlbumId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Invoice</td>
-				 <td>Table</td>
-				 <td>BillingState</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
 				 <td>Employee</td>
 				 <td>Table</td>
-				 <td>Country</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title='nullable'>√</td>
+				 <td>FirstName</td>
+				 <td>varchar</td>
+				 <td>20</td>
+				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
@@ -138,360 +116,8 @@
 				 <td>Employee</td>
 				 <td>Table</td>
 				 <td>PostalCode</td>
-				 <td>nvarchar</td>
-				 <td>20</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>Address</td>
-				 <td>nvarchar</td>
-				 <td>140</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Invoice</td>
-				 <td>Table</td>
-				 <td>BillingCity</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Genre</td>
-				 <td>Table</td>
-				 <td>Name</td>
-				 <td>nvarchar</td>
-				 <td>240</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Invoice</td>
-				 <td>Table</td>
-				 <td>InvoiceDate</td>
-				 <td>datetime</td>
-				 <td>16</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Track</td>
-				 <td>Table</td>
-				 <td>Bytes</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>InvoiceLine</td>
-				 <td>Table</td>
-				 <td>UnitPrice</td>
-				 <td>numeric</td>
-				 <td>12</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>CustomerId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td>Company</td>
-				 <td>nvarchar</td>
-				 <td>160</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>PlaylistTrack</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>TrackId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>FirstName</td>
-				 <td>nvarchar</td>
-				 <td>40</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Artist</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>ArtistId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td>State</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Playlist</td>
-				 <td>Table</td>
-				 <td>Name</td>
-				 <td>nvarchar</td>
-				 <td>240</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td>Fax</td>
-				 <td>nvarchar</td>
-				 <td>48</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>LastName</td>
-				 <td>nvarchar</td>
-				 <td>40</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Playlist</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>PlaylistId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Track</td>
-				 <td>Table</td>
-				 <td>UnitPrice</td>
-				 <td>numeric</td>
-				 <td>12</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Track</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>TrackId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>Phone</td>
-				 <td>nvarchar</td>
-				 <td>48</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td>FirstName</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>InvoiceLine</td>
-				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>TrackId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>ReportsTo</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>InvoiceLine</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>InvoiceLineId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>State</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>EmployeeId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td>Phone</td>
-				 <td>nvarchar</td>
-				 <td>48</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Album</td>
-				 <td>Table</td>
-				 <td>Title</td>
-				 <td>nvarchar</td>
-				 <td>320</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td>PostalCode</td>
-				 <td>nvarchar</td>
-				 <td>20</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>City</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>SupportRepId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Invoice</td>
-				 <td>Table</td>
-				 <td>BillingAddress</td>
-				 <td>nvarchar</td>
-				 <td>140</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>HireDate</td>
-				 <td>datetime</td>
-				 <td>16</td>
+				 <td>varchar</td>
+				 <td>10</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -501,8 +127,8 @@
 				 <td>Employee</td>
 				 <td>Table</td>
 				 <td>BirthDate</td>
-				 <td>datetime</td>
-				 <td>16</td>
+				 <td>timestamp</td>
+				 <td>29</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -511,20 +137,64 @@
 				<tr>
 				 <td>Track</td>
 				 <td>Table</td>
-				 <td>Composer</td>
-				 <td>nvarchar</td>
-				 <td>440</td>
+				 <td>UnitPrice</td>
+				 <td>numeric</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Invoice</td>
+				 <td>Table</td>
+				 <td>BillingState</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>InvoiceLine</td>
+				 <td>Customer</td>
 				 <td>Table</td>
-				 <td>Quantity</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>State</td>
+				 <td>varchar</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>Phone</td>
+				 <td>varchar</td>
+				 <td>24</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Customer</td>
+				 <td>Table</td>
+				 <td>Fax</td>
+				 <td>varchar</td>
+				 <td>24</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Track</td>
+				 <td>Table</td>
+				 <td>Milliseconds</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -533,9 +203,53 @@
 				<tr>
 				 <td>Customer</td>
 				 <td>Table</td>
-				 <td>Country</td>
-				 <td>nvarchar</td>
+				 <td>Email</td>
+				 <td>varchar</td>
+				 <td>60</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Track</td>
+				 <td>Table</td>
+				 <td>Composer</td>
+				 <td>varchar</td>
+				 <td>220</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Invoice</td>
+				 <td>Table</td>
+				 <td>BillingPostalCode</td>
+				 <td>varchar</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Customer</td>
+				 <td>Table</td>
+				 <td>Company</td>
+				 <td>varchar</td>
 				 <td>80</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>Country</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -545,19 +259,52 @@
 				 <td>Album</td>
 				 <td>Table</td>
 				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>ArtistId</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>MediaType</td>
+				 <td>InvoiceLine</td>
 				 <td>Table</td>
-				 <td>Name</td>
-				 <td>nvarchar</td>
-				 <td>240</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>InvoiceLineId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Invoice</td>
+				 <td>Table</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>CustomerId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td><p>This comment is for column if you want you can jump to <a href="./tables/Track.html#TrackId">Track.TrackId</a></p></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>HireDate</td>
+				 <td>timestamp</td>
+				 <td>29</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Track</td>
+				 <td>Table</td>
+				 <td>Bytes</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -566,10 +313,10 @@
 				<tr>
 				 <td>AlbumsArtists</td>
 				 <td>View</td>
-				 <td>Album</td>
-				 <td>nvarchar</td>
-				 <td>320</td>
-				 <td title=''></td>
+				 <td>artist</td>
+				 <td>varchar</td>
+				 <td>120</td>
+				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
@@ -577,9 +324,9 @@
 				<tr>
 				 <td>Customer</td>
 				 <td>Table</td>
-				 <td>Address</td>
-				 <td>nvarchar</td>
-				 <td>140</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>SupportRepId</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -589,31 +336,31 @@
 				 <td>Employee</td>
 				 <td>Table</td>
 				 <td>Title</td>
-				 <td>nvarchar</td>
-				 <td>60</td>
+				 <td>varchar</td>
+				 <td>30</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>Invoice</td>
+				 <td>Playlist</td>
 				 <td>Table</td>
-				 <td>BillingCountry</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
-				 <td title='nullable'>√</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>PlaylistId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>Invoice</td>
-				 <td>Table</td>
-				 <td>Total</td>
-				 <td>numeric</td>
-				 <td>12</td>
-				 <td title=''></td>
+				 <td>AlbumsArtists</td>
+				 <td>View</td>
+				 <td>album</td>
+				 <td>varchar</td>
+				 <td>160</td>
+				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
@@ -621,9 +368,20 @@
 				<tr>
 				 <td>Track</td>
 				 <td>Table</td>
-				 <td>Milliseconds</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>AlbumId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>MediaType</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>MediaTypeId</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -632,8 +390,8 @@
 				<tr>
 				 <td>Customer</td>
 				 <td>Table</td>
-				 <td>LastName</td>
-				 <td>nvarchar</td>
+				 <td>FirstName</td>
+				 <td>varchar</td>
 				 <td>40</td>
 				 <td title=''></td>
 				 <td title=''></td>
@@ -644,20 +402,20 @@
 				 <td>Customer</td>
 				 <td>Table</td>
 				 <td>City</td>
-				 <td>nvarchar</td>
-				 <td>80</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>Artist</td>
+				 <td>Album</td>
 				 <td>Table</td>
-				 <td>Name</td>
-				 <td>nvarchar</td>
-				 <td>240</td>
-				 <td title='nullable'>√</td>
+				 <td>Title</td>
+				 <td>varchar</td>
+				 <td>160</td>
+				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
@@ -665,43 +423,10 @@
 				<tr>
 				 <td>Invoice</td>
 				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>InvoiceId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Employee</td>
-				 <td>Table</td>
-				 <td>Email</td>
-				 <td>nvarchar</td>
-				 <td>120</td>
+				 <td>BillingCountry</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>PlaylistTrack</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>PlaylistId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Customer</td>
-				 <td>Table</td>
-				 <td>Email</td>
-				 <td>nvarchar</td>
-				 <td>120</td>
-				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
@@ -710,19 +435,8 @@
 				 <td>Track</td>
 				 <td>Table</td>
 				 <td>Name</td>
-				 <td>nvarchar</td>
-				 <td>400</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>MediaType</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>MediaTypeId</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>varchar</td>
+				 <td>200</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -732,8 +446,30 @@
 				 <td>InvoiceLine</td>
 				 <td>Table</td>
 				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>InvoiceId</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>PlaylistTrack</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>TrackId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>LastName</td>
+				 <td>varchar</td>
+				 <td>20</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -742,20 +478,64 @@
 				<tr>
 				 <td>Invoice</td>
 				 <td>Table</td>
-				 <td>BillingPostalCode</td>
-				 <td>nvarchar</td>
-				 <td>20</td>
+				 <td>InvoiceDate</td>
+				 <td>timestamp</td>
+				 <td>29</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Invoice</td>
+				 <td>Table</td>
+				 <td>Total</td>
+				 <td>numeric</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Artist</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>ArtistId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>InvoiceLine</td>
+				 <td>Table</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>TrackId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Customer</td>
+				 <td>Table</td>
+				 <td>Country</td>
+				 <td>varchar</td>
+				 <td>40</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>Invoice</td>
+				 <td>Track</td>
 				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>CustomerId</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>TrackId</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -765,41 +545,30 @@
 				 <td>Genre</td>
 				 <td>Table</td>
 				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>GenreId</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>AlbumsArtists</td>
-				 <td>View</td>
-				 <td>Artist</td>
-				 <td>nvarchar</td>
-				 <td>240</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>Track</td>
+				 <td>Album</td>
 				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>GenreId</td>
-				 <td>int</td>
-				 <td>4</td>
-				 <td title='nullable'>√</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>AlbumId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>Track</td>
+				 <td>Customer</td>
 				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>MediaTypeId</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>LastName</td>
+				 <td>varchar</td>
+				 <td>20</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -809,23 +578,254 @@
 				 <td>Employee</td>
 				 <td>Table</td>
 				 <td>Fax</td>
-				 <td>nvarchar</td>
-				 <td>48</td>
+				 <td>varchar</td>
+				 <td>24</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>Album</td>
+				 <td>Artist</td>
 				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>AlbumId</td>
-				 <td>int</td>
-				 <td>4</td>
+				 <td>Name</td>
+				 <td>varchar</td>
+				 <td>120</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>Address</td>
+				 <td>varchar</td>
+				 <td>70</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Track</td>
+				 <td>Table</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>GenreId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>PlaylistTrack</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>PlaylistId</td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
-				 <td><p>Album table is main object in our database, each album has relation to <strong><a href="./tables/Artist.html">Artist</a></strong> table <a href="./tables/Invoice.html#Total">Invoice.Total</a></p></td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Playlist</td>
+				 <td>Table</td>
+				 <td>Name</td>
+				 <td>varchar</td>
+				 <td>120</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Invoice</td>
+				 <td>Table</td>
+				 <td>BillingAddress</td>
+				 <td>varchar</td>
+				 <td>70</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>ReportsTo</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>City</td>
+				 <td>varchar</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Customer</td>
+				 <td>Table</td>
+				 <td>PostalCode</td>
+				 <td>varchar</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Invoice</td>
+				 <td>Table</td>
+				 <td>BillingCity</td>
+				 <td>varchar</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Genre</td>
+				 <td>Table</td>
+				 <td>Name</td>
+				 <td>varchar</td>
+				 <td>120</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>State</td>
+				 <td>varchar</td>
+				 <td>40</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Track</td>
+				 <td>Table</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>MediaTypeId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Customer</td>
+				 <td>Table</td>
+				 <td>Address</td>
+				 <td>varchar</td>
+				 <td>70</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>MediaType</td>
+				 <td>Table</td>
+				 <td>Name</td>
+				 <td>varchar</td>
+				 <td>120</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>InvoiceLine</td>
+				 <td>Table</td>
+				 <td>Quantity</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td>Email</td>
+				 <td>varchar</td>
+				 <td>60</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Customer</td>
+				 <td>Table</td>
+				 <td>Phone</td>
+				 <td>varchar</td>
+				 <td>24</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Employee</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>EmployeeId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Customer</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>CustomerId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>Invoice</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>InvoiceId</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>InvoiceLine</td>
+				 <td>Table</td>
+				 <td>UnitPrice</td>
+				 <td>numeric</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
 				</tr>
 								</tbody>
 				</table>				
