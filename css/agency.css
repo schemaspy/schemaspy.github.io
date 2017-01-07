@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v1.1.1 (http://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2016 Start Bootstrap
+ * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
@@ -771,4 +771,9 @@ pre.console {
   background: #555;
   color: white;
   margin-bottom: 20px;
+}
+.badge-notify {
+  background: #337ab7;
+  position: relative;
+  left: -10px;
 }

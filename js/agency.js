@@ -30,4 +30,20 @@
         }
     })
 
+    downloadCount();
+
 })(jQuery); // End of use strict
+
+function downloadCount() {
+    $.get("https://api.github.com/repos/schemaspy/schemaspy/releases/5061540", function(data) 
+    {
+        assets = data['assets']
+        if (assets != undefined) {
+            asset = assets[0];
+            if (asset != undefined) {
+                count =  asset['download_count'];
+            }
+        }
+        $('#downloads_number').text(count);
+    });
+}
