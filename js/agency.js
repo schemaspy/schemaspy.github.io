@@ -35,7 +35,7 @@
 })(jQuery); // End of use strict
 
 function downloadCount() {
-    $.get("https://api.github.com/repos/schemaspy/schemaspy/releases/5061540", function(data) 
+    $.get("https://api.github.com/repos/schemaspy/schemaspy/releases/5945317", function(data) 
     {
         assets = data['assets']
         if (assets != undefined) {
