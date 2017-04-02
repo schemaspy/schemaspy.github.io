@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>chinook Database</title>
+  <title>Chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -13,9 +13,9 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">  
+  <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.bootstrap.min.css">  
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.bootstrap.min.css">
   <!-- Code Mirror -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.2/codemirror.min.css">
   <!-- Fonts -->
@@ -41,12 +41,11 @@
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-blue layout-top-nav">
 <div class="wrapper">
-
   <header class="main-header">
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../index.html" class="navbar-brand"><b>chinook</b> Database</a>
+          <a href="../index.html" class="navbar-brand"><b>Chinook</b> Database</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -108,8 +107,8 @@
 				<tbody>
 				<tr>
 				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="EmployeeId">EmployeeId</span></td>
-				 <td>int4</td>
-				 <td>10</td>
+				 <td>int</td>
+				 <td>4</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -141,8 +140,8 @@
 				</tr>
 				<tr>
 				 <td><span id="LastName">LastName</span></td>
-				 <td>varchar</td>
-				 <td>20</td>
+				 <td>nvarchar</td>
+				 <td>40</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -158,8 +157,8 @@
 				</tr>
 				<tr>
 				 <td><span id="FirstName">FirstName</span></td>
-				 <td>varchar</td>
-				 <td>20</td>
+				 <td>nvarchar</td>
+				 <td>40</td>
 				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -175,8 +174,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Title">Title</span></td>
-				 <td>varchar</td>
-				 <td>30</td>
+				 <td>nvarchar</td>
+				 <td>60</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -192,8 +191,8 @@
 				</tr>
 				<tr>
 				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ReportsTo">ReportsTo</span></td>
-				 <td>int4</td>
-				 <td>10</td>
+				 <td>int</td>
+				 <td>4</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -217,8 +216,8 @@
 				</tr>
 				<tr>
 				 <td><span id="BirthDate">BirthDate</span></td>
-				 <td>timestamp</td>
-				 <td>29</td>
+				 <td>datetime</td>
+				 <td>16</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -234,8 +233,8 @@
 				</tr>
 				<tr>
 				 <td><span id="HireDate">HireDate</span></td>
-				 <td>timestamp</td>
-				 <td>29</td>
+				 <td>datetime</td>
+				 <td>16</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -251,8 +250,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Address">Address</span></td>
-				 <td>varchar</td>
-				 <td>70</td>
+				 <td>nvarchar</td>
+				 <td>140</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -268,8 +267,8 @@
 				</tr>
 				<tr>
 				 <td><span id="City">City</span></td>
-				 <td>varchar</td>
-				 <td>40</td>
+				 <td>nvarchar</td>
+				 <td>80</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -285,8 +284,8 @@
 				</tr>
 				<tr>
 				 <td><span id="State">State</span></td>
-				 <td>varchar</td>
-				 <td>40</td>
+				 <td>nvarchar</td>
+				 <td>80</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -302,8 +301,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Country">Country</span></td>
-				 <td>varchar</td>
-				 <td>40</td>
+				 <td>nvarchar</td>
+				 <td>80</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -319,8 +318,8 @@
 				</tr>
 				<tr>
 				 <td><span id="PostalCode">PostalCode</span></td>
-				 <td>varchar</td>
-				 <td>10</td>
+				 <td>nvarchar</td>
+				 <td>20</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -336,8 +335,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Phone">Phone</span></td>
-				 <td>varchar</td>
-				 <td>24</td>
+				 <td>nvarchar</td>
+				 <td>48</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -353,8 +352,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Fax">Fax</span></td>
-				 <td>varchar</td>
-				 <td>24</td>
+				 <td>nvarchar</td>
+				 <td>48</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -370,8 +369,8 @@
 				</tr>
 				<tr>
 				 <td><span id="Email">Email</span></td>
-				 <td>varchar</td>
-				 <td>60</td>
+				 <td>nvarchar</td>
+				 <td>120</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -433,7 +432,7 @@
 			<div class="box-header with-border">
               <i class="fa fa-code-fork"></i>
 
-              <h3 class="box-title">Relationships</h3>
+              <h3 id="Relationships" class="box-title">Relationships</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -452,17 +451,17 @@
             <div class="tab-content no-padding">            
 				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="331,5,485,152">
-<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,287,541">
+<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="319,5,473,152">
+<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,275,541">
 </map>
 
 					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/Employee.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
 				</div>
 				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="331,5,485,152">
-<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,287,541">
-<area shape="rect" id="node3" href="Invoice.html" title="Invoice" alt="" coords="529,8,679,96">
+<area shape="rect" id="node1" href="Customer.html" title="Customer" alt="" coords="319,5,473,152">
+<area shape="rect" id="node2" href="Employee.html" title="Employee" alt="" coords="29,32,275,541">
+<area shape="rect" id="node3" href="Invoice.html" title="Invoice" alt="" coords="517,8,667,96">
 </map>
 
 					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/Employee.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
@@ -471,7 +470,8 @@
 			</div>
 		  </div><!-- /.box-body -->
 		</div>
-	      </section>    
+	      </section>
+    
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -480,7 +480,7 @@
         <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
         <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
       </div>
-      <strong>Generate by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemeSpy 6.0</a></strong>
+      <strong>Generate by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemeSpy 6.0.0-rc1</a></strong>
     </div>
     <!-- /.container -->
   </footer>
@@ -510,6 +510,8 @@
 <script src="../plugins/fastclick/fastclick.js"></script>
 <!-- Salvattore -->
 <script src="../plugins/salvattore/salvattore.min.js"></script>
+<!-- AnchorJS -->
+<script src="../plugins/anchorjs/anchor.min.js"></script>
 <!-- CodeMirror -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.2/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.2/mode/sql/sql.min.js"></script>
