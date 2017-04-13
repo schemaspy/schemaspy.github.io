@@ -19,7 +19,7 @@
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
+    $('.navbar-collapse ul li a').click(function(){ 
         $('.navbar-toggle:visible').click();
     });
 
@@ -31,13 +31,14 @@
     })
 
     downloadCount();
+    numberOfStars();
 
 })(jQuery); // End of use strict
 
 function downloadCount() {
     $.get("https://api.github.com/repos/schemaspy/schemaspy/releases/5945317", function(data) 
     {
-        assets = data['assets']
+        assets = data['assets'];
         if (assets != undefined) {
             asset = assets[0];
             if (asset != undefined) {
@@ -45,5 +46,13 @@ function downloadCount() {
             }
         }
         $('#downloads_number').text(count);
+    });
+}
+
+function numberOfStars() {
+    $.get("https://api.github.com/repos/schemaspy/schemaspy", function(data) 
+    {
+        stargazers_count = data['stargazers_count'];
+        $('#stars_number').text(stargazers_count);
     });
 }
