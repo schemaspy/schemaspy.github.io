@@ -138,12 +138,20 @@ h1, h2, h3, h4, h5, h6 {
 .logo-text {
     color: white;
     .logo-font;
-    font-size: 45px;    
+    font-size: 35px;    
 }
 
 .logo-text-dark {
     .logo-text;
     color: inherit;
+}
+
+@media(min-width:768px) {
+    .logo-text {
+        color: white;
+        .logo-font;
+        font-size: 45px;    
+    }    
 }
 
 @media(min-width:768px) {
@@ -199,8 +207,8 @@ header {
         .intro-heading {
             .heading-font;
             font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
+            font-size: 35px;
+            line-height: 35px;
             margin-bottom: 25px;
         }
     }
@@ -234,7 +242,7 @@ header {
 section {
     padding: 100px 0;
     h2.section-heading {
-        font-size: 40px;
+        font-size: 30px;
         margin-top: 0;
         margin-bottom: 15px;
     }
@@ -251,6 +259,9 @@ section {
 @media(min-width:768px) {
     section {
         padding: 150px 0;
+        h2.section-heading {
+            font-size: 40px;
+        }        
     }
 }
 

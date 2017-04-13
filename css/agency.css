@@ -196,13 +196,20 @@ fieldset[disabled] .btn-xl.active {
 .logo-text {
   color: white;
   font-family: "Indie Flower", "Helvetica Neue", Helvetica, Arial, cursive;
-  font-size: 45px;
+  font-size: 35px;
 }
 .logo-text-dark {
   color: white;
   font-family: "Indie Flower", "Helvetica Neue", Helvetica, Arial, cursive;
-  font-size: 45px;
+  font-size: 35px;
   color: inherit;
+}
+@media (min-width: 768px) {
+  .logo-text {
+    color: white;
+    font-family: "Indie Flower", "Helvetica Neue", Helvetica, Arial, cursive;
+    font-size: 45px;
+  }
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -258,8 +265,8 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 35px;
+  line-height: 35px;
   margin-bottom: 25px;
 }
 @media (min-width: 768px) {
@@ -286,7 +293,7 @@ section {
   padding: 100px 0;
 }
 section h2.section-heading {
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -301,6 +308,9 @@ section h3.section-subheading {
 @media (min-width: 768px) {
   section {
     padding: 150px 0;
+  }
+  section h2.section-heading {
+    font-size: 40px;
   }
 }
 .service-heading {
