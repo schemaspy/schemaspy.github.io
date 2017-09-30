@@ -36,15 +36,20 @@
 })(jQuery); // End of use strict
 
 function downloadCount() {
-    $.get("https://api.github.com/repos/schemaspy/schemaspy/releases/7883746", function(data) 
+    $.get("https://api.github.com/repos/schemaspy/schemaspy/releases", function(releases) 
     {
-        assets = data['assets'];
-        if (assets != undefined) {
-            asset = assets[0];
-            if (asset != undefined) {
-                count =  asset['download_count'];
+        var count = 0;
+        for (var prop in releases) {
+            var data = releases[prop];
+            assets = data['assets'];
+            if (assets != undefined) {
+                asset = assets[0];
+                if (asset != undefined) {
+                    count += asset['download_count'];
+                }
             }
         }
+
         $('#downloads_number').text(count);
     });
 }
