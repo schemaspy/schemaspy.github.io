@@ -6,36 +6,37 @@
   <title>Chinook Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   <!-- Bootstrap 3.3.5 -->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">  
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.bootstrap.min.css">  
+  <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
   <!-- Code Mirror -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.2/codemirror.min.css">
+  <link rel="stylesheet" href="bower/codemirror/codemirror.css">
   <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-  
+  <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+  <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
   <!-- Salvattore -->
-  <link rel="stylesheet" href="plugins/salvattore/salvattore.css">
+  <link rel="stylesheet" href="bower/salvattore/salvattore.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/all-skins.min.css">
+  <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
   <!-- SchemaSpy -->
   <link rel="stylesheet" href="schemaSpy.css">
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <script src="bower/html5shiv/html5shiv.min.js"></script>
+  <script src="bower/respond/respond.min.js"></script>
   <![endif]-->
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
@@ -54,13 +55,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>            
-			<!--<li><a href="components.html" title="List of system components">Components</a></li>-->
+            <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
 			<li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
 			<li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
 			<li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
 			<li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>				
 			<li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+			<li><a href="routines.html" title="Procedures and functions">Routines</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -76,18 +77,24 @@
           <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>Tables</h1></br>
-		<div class="callout callout-info"> 		
-			<h4>SchemaSpy Analysis of Chinook.dbo</h4>
-			<p>Generated on Pt kwi 07 06:56 CEST 2017</p>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="callout callout-info">
+					<h4>SchemaSpy Analysis of Chinook</h4>
+					<p>Generated on Pn sie 06 00:23 CEST 2018</p>
+				</div>
+			</div>
 		</div>
+
+
         <a href="Chinook.dbo.xml" title="XML Representation">XML Representation</a></br>
 		<a href="insertionOrder.txt" title="Useful for loading data into a database">Insertion Order</a>
         <a href="deletionOrder.txt" title="Useful for purging data from a database">Deletion Order</a>	
       </section>
       <!-- Main content -->
       <section class="content">
-		<div class="row">
-		  <div class="col-md-3 col-sm-6 col-xs-12">
+		  <div class="row">
+			<div class="col-md-2 col-sm-4 col-xs-12">
 			  <div class="info-box">
 				  <span class="info-box-icon bg-aqua"><i class="fa fa-table"></i></span>
 				  <div class="info-box-content">
@@ -97,11 +104,11 @@
 				  <!-- /.info-box-content -->
 			  </div>
 			  <!-- /.info-box -->
-		  </div>
-		  <!-- /.col -->
-		  <div class="col-md-3 col-sm-6 col-xs-12">
+			</div>
+			<!-- /.col -->
+			<div class="col-md-2 col-sm-4 col-xs-12">
 			  <div class="info-box">
-				  <span class="info-box-icon bg-red"><i class="fa fa-table"></i></span>
+				  <span class="info-box-icon bg-teal"><i class="fa fa-table"></i></span>
 				  <div class="info-box-content">
 					  <span class="info-box-text">VIEWS</span>
 					  <span class="info-box-number">1</span>
@@ -109,13 +116,10 @@
 				  <!-- /.info-box-content -->
 			  </div>
 			  <!-- /.info-box -->
-		  </div>
-		  <!-- /.col -->
+			</div>
+			<!-- /.col -->
 
-		  <!-- fix for small devices only -->
-		  <div class="clearfix visible-sm-block"></div>
-
-		  <div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="col-md-2 col-sm-4 col-xs-12">
 			  <div class="info-box">
 				  <span class="info-box-icon bg-green"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
 
@@ -126,9 +130,9 @@
 				  <!-- /.info-box-content -->
 			  </div>
 			  <!-- /.info-box -->
-		  </div>
+			</div>
 		  <!-- /.col -->
-		  <div class="col-md-3 col-sm-6 col-xs-12">
+			<div class="col-md-2 col-sm-4 col-xs-12">
 			  <div class="info-box">
 				  <span class="info-box-icon bg-yellow"><i class="ion ion-key"></i></span>
 
@@ -139,8 +143,34 @@
 				  <!-- /.info-box-content -->
 			  </div>
 			  <!-- /.info-box -->
-		  </div>
-		  <!-- /.col -->
+			</div>
+			<!-- /.col -->
+			<div class="col-md-2 col-sm-4 col-xs-12">
+			  <div class="info-box">
+				  <span class="info-box-icon bg-red-active"><i class="fa fa-question" aria-hidden="true"></i></span>
+
+				  <div class="info-box-content">
+					  <span class="info-box-text">Anomalies</span>
+					  <span class="info-box-number">0</span>
+				  </div>
+				  <!-- /.info-box-content -->
+			  </div>
+			  <!-- /.info-box -->
+			</div>
+		  	<!-- /.col -->
+			<div class="col-md-2 col-sm-4 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-navy"><i class="fa fa-file-code-o" aria-hidden="true"></i></span>
+
+					<div class="info-box-content">
+						<span class="info-box-text">Routines</span>
+						<span class="info-box-number">1</span>
+					</div>
+					<!-- /.info-box-content -->
+				</div>
+				<!-- /.info-box -->
+			</div>
+			<!-- /.col -->
 		</div>
 		<div class="box box-primary">		
 			<div class="box-header with-border">
@@ -148,7 +178,7 @@
 			  <span class="label label-primary pull-right"><i class="fa fa-cog fa-2x"></i></span>			  
 			</div><!-- /.box-header -->
 			<div class="box-body">
-			  <p>Database Type: Microsoft SQL Server - 12.00.5000</p>			  
+			  <p>Database Type: Microsoft SQL Server - 14.00.1000</p>			  
 			</div><!-- /.box-body -->
 		</div>
 		<div class="box box-primary">
@@ -157,6 +187,10 @@
 			  <span class="label label-primary pull-right"><i class="fa fa-database fa-2x"></i></span>
             </div><!-- /.box-header -->
             <div class="box-body">
+			<div class="row">
+				<div id="button_group_one" class="col-md-3 col-sm-6"></div>
+				<div id="button_group_two" class="col-md-2 col-sm-4 pull-right text-right"></div>
+			</div>
             <table id="database_objects" class="table table-bordered table-striped dataTable" role="grid">
 				<thead>
 					<tr>
@@ -170,22 +204,6 @@
 					</tr>
 				</thead>
 				<tbody>
-				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/Album.html">Album</a></td>
-				  <td class="detail" align="right">1</td>
-				  <td class="detail" align="right">1</td>
-				  <td class="detail" align="right">3</td>
-				  <td class="detail" align="right">347</td>
-				  <td class="detail" align="right">Table</td>
-				  <td class="comment detail" style="display: table-cell;"><p>This is comment for database on PostgresSQL <a href="./tables/Invoice.html">Invoice</a> link is also working</p></td>
-				  </tr>
-				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/AlbumsArtists.html">AlbumsArtists</a></td>
-				  <td class="detail" align="right">0</td>
-				  <td class="detail" align="right">0</td>
-				  <td class="detail" align="right">2</td>
-				  <td class="detail" align="right">0</td>
-				  <td class="detail" align="right">View</td>
-				  <td class="comment detail" style="display: table-cell;"></td>
-				  </tr>
 				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/Artist.html">Artist</a></td>
 				  <td class="detail" align="right">1</td>
 				  <td class="detail" align="right">0</td>
@@ -194,11 +212,11 @@
 				  <td class="detail" align="right">Table</td>
 				  <td class="comment detail" style="display: table-cell;"></td>
 				  </tr>
-				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/Customer.html">Customer</a></td>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/MediaType.html">MediaType</a></td>
 				  <td class="detail" align="right">1</td>
-				  <td class="detail" align="right">1</td>
-				  <td class="detail" align="right">13</td>
-				  <td class="detail" align="right">59</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">5</td>
 				  <td class="detail" align="right">Table</td>
 				  <td class="comment detail" style="display: table-cell;"></td>
 				  </tr>
@@ -207,6 +225,30 @@
 				  <td class="detail" align="right">1</td>
 				  <td class="detail" align="right">15</td>
 				  <td class="detail" align="right">8</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/Album.html">Album</a></td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">3</td>
+				  <td class="detail" align="right">347</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"><p>This is comment for database on PostgresSQL <a href="./tables/Invoice.html">Invoice</a> link is also working</p></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/PlaylistTrack.html">PlaylistTrack</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">8715</td>
+				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/Customer.html">Customer</a></td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">1</td>
+				  <td class="detail" align="right">13</td>
+				  <td class="detail" align="right">59</td>
 				  <td class="detail" align="right">Table</td>
 				  <td class="comment detail" style="display: table-cell;"></td>
 				  </tr>
@@ -225,8 +267,8 @@
 				  <td class="detail" align="right">412</td>
 				  <td class="detail" align="right">Table</td>
 				  <td class="comment detail" style="display: table-cell;"><h1>Markdown syntax example</h1>
-<h2><a href="./tables/Invoice.html">Invoice</a> table</h2>
-<h3>Important column is <a href="./tables/Invoice.html#Total">Invoice.Total</a></h3>
+<h1><a href="./tables/Invoice.html">Invoice</a> table</h1>
+<h2>Important column is <a href="./tables/Invoice.html#Total">Invoice.Total</a></h2>
 <blockquote>
   <p>This is a blockquote.</p>
   <p>This is the second paragraph in the blockquote.</p>
@@ -234,27 +276,14 @@
 </blockquote>
 <p>Some of these words <em>are emphasized</em>. Some of these words <em>are emphasized also</em>.</p>
 <p>Use two asterisks for <strong>strong emphasis</strong>. Or, if you prefer, <strong>use two underscores instead</strong>.</p>
-<p>Bullet list:</p>
-<ul>
-  <li><a href="./tables/Artist.html">Artist</a></li>
-  <li><a href="./tables/Track.html#Bytes">Track.Bytes</a></li>
-  <li><a href="./tables/Playlist.html">Playlist</a></li>
-</ul>
-<p>This is an <a href="http://schemaspy.org/" title="SchemaSpy Markdown">SchemaSpy</a>.</p></td>
+<p>Bullet list: <ul> <li><a href="./tables/Artist.html">Artist</a></li> <li> <a href="./tables/Track.html#Bytes">Track.Bytes</a></li> <li><a href="./tables/Playlist.html">Playlist</a></li> </ul></p>
+<p>This is an <a href="http://schemaspy.org">SchemaSpy</a>.</p></td>
 				  </tr>
 				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/InvoiceLine.html">InvoiceLine</a></td>
 				  <td class="detail" align="right">0</td>
 				  <td class="detail" align="right">2</td>
 				  <td class="detail" align="right">5</td>
 				  <td class="detail" align="right">2240</td>
-				  <td class="detail" align="right">Table</td>
-				  <td class="comment detail" style="display: table-cell;"></td>
-				  </tr>
-				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/MediaType.html">MediaType</a></td>
-				  <td class="detail" align="right">1</td>
-				  <td class="detail" align="right">0</td>
-				  <td class="detail" align="right">2</td>
-				  <td class="detail" align="right">5</td>
 				  <td class="detail" align="right">Table</td>
 				  <td class="comment detail" style="display: table-cell;"></td>
 				  </tr>
@@ -266,20 +295,20 @@
 				  <td class="detail" align="right">Table</td>
 				  <td class="comment detail" style="display: table-cell;"></td>
 				  </tr>
-				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/PlaylistTrack.html">PlaylistTrack</a></td>
-				  <td class="detail" align="right">0</td>
-				  <td class="detail" align="right">2</td>
-				  <td class="detail" align="right">2</td>
-				  <td class="detail" align="right">8715</td>
-				  <td class="detail" align="right">Table</td>
-				  <td class="comment detail" style="display: table-cell;"></td>
-				  </tr>
 				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/Track.html">Track</a></td>
 				  <td class="detail" align="right">2</td>
 				  <td class="detail" align="right">3</td>
 				  <td class="detail" align="right">9</td>
 				  <td class="detail" align="right">3503</td>
 				  <td class="detail" align="right">Table</td>
+				  <td class="comment detail" style="display: table-cell;"></td>
+				  </tr>
+				 <tr class="tbl even" valign="top">  <td class="detail"><a href="tables/AlbumsArtists.html">AlbumsArtists</a></td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">2</td>
+				  <td class="detail" align="right">0</td>
+				  <td class="detail" align="right">View</td>
 				  <td class="comment detail" style="display: table-cell;"></td>
 				  </tr>
 				  			</table>
@@ -290,7 +319,7 @@
       <!-- /.content -->
 	  <script>
           var config = {
-              paggination: false
+	          pagination: true
           }
 	  </script>    
   </div>
@@ -301,45 +330,44 @@
         <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
         <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
       </div>
-      <strong>Generate by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0-rc1</a></strong>
+      <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.0.0</a></strong>
     </div>
     <!-- /.container -->
   </footer>
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 2.1.4 -->
-<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-<script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- jQuery 2.2.3 -->
+<script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
 <!-- Bootstrap 3.3.5 -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
 <!-- DataTables -->
-<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
-<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
-<script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.print.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.colVis.min.js"></script>
-
+<script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+<script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+<script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+<script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+<!-- SheetJS -->
+<script src="bower/js-xlsx/xlsx.full.min.js"></script>
+<!-- pdfmake -->
+<script src="bower/pdfmake/pdfmake.min.js"></script>
+<script src="bower/pdfmake/vfs_fonts.js"></script>
 <!-- SlimScroll -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
+<script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
 <!-- Salvattore -->
-<script src="plugins/salvattore/salvattore.min.js"></script>
+<script src="bower/salvattore/salvattore.min.js"></script>
 <!-- AnchorJS -->
-<script src="plugins/anchorjs/anchor.min.js"></script>
+<script src="bower/anchor-js/anchor.min.js"></script>
 <!-- CodeMirror -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.2/codemirror.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.2/mode/sql/sql.min.js"></script>
+<script src="bower/codemirror/codemirror.js"></script>
+<script src="bower/codemirror/sql.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="bower/admin-lte/dist/js/app.min.js"></script>
 <script src="main.js"></script>
 <script src="schemaSpy.js"></script>
 </body>

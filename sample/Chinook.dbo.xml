@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<database name="Chinook" schema="dbo" type="Microsoft SQL Server - 12.00.5000">
+<database name="Chinook" schema="dbo" type="Microsoft SQL Server - 14.00.1000">
    <tables>
       <table catalog="Chinook" name="Album" numRows="347" remarks="This is comment for database on PostgresSQL [Invoice] link is also working" schema="dbo" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="AlbumId" nullable="false" remarks="" size="4" type="int">
@@ -96,7 +96,7 @@
             <column ascending="true" name="GenreId"/>
          </index>
       </table>
-      <table catalog="Chinook" name="Invoice" numRows="412" remarks="Markdown syntax example&#13;&#10;==================&#13;&#10;&#13;&#10;[Invoice] table&#13;&#10;----------------&#13;&#10;&#13;&#10;### Important column is [Invoice.Total]&#13;&#10;&#13;&#10;&gt; This is a blockquote.&#13;&#10;&gt; &#13;&#10;&gt; This is the second paragraph in the blockquote.&#13;&#10;&gt;&#13;&#10;&gt; ## This is an H2 in a blockquote&#13;&#10;&#13;&#10;Some of these words *are emphasized*.&#13;&#10;Some of these words _are emphasized also_.&#13;&#10;&#13;&#10;Use two asterisks for **strong emphasis**.&#13;&#10;Or, if you prefer, __use two underscores instead__.&#13;&#10;&#13;&#10;Bullet list:&#13;&#10;&#13;&#10;- [Artist]&#13;&#10;- [Track.Bytes]&#13;&#10;- [Playlist]&#13;&#10;&#13;&#10;This is an [SchemaSpy](http://schemaspy.org/ &quot;SchemaSpy Markdown&quot;)." schema="dbo" type="TABLE">
+      <table catalog="Chinook" name="Invoice" numRows="412" remarks="# Markdown syntax example&#13;&#10;# [Invoice] table&#13;&#10;## Important column is [Invoice.Total]&#13;&#10;&gt; This is a blockquote.&#13;&#10;&gt;&#13;&#10;&gt; This is the second paragraph in the blockquote.&#13;&#10;&gt;&#13;&#10;&gt; ## This is an H2 in a blockquote&#13;&#10;&#13;&#10;Some of these words *are emphasized*. Some of these words _are emphasized also_.&#13;&#10;&#13;&#10;Use two asterisks for **strong emphasis**. Or, if you prefer, __use two underscores instead__.&#13;&#10;&#13;&#10;Bullet list:&#13;&#10;&lt;ul&gt;&#13;&#10;&lt;li&gt;[Artist]&lt;/li&gt;&#13;&#10;&lt;li&gt; [Track.Bytes]&lt;/li&gt;&#13;&#10;&lt;li&gt;[Playlist]&lt;/li&gt;&#13;&#10;&lt;/ul&gt;&#13;&#10;&#13;&#10;This is an [SchemaSpy](http://schemaspy.org)." schema="dbo" type="TABLE">
          <column autoUpdated="false" digits="0" id="0" name="InvoiceId" nullable="false" remarks="" size="4" type="int">
             <child catalog="Chinook" column="InvoiceId" foreignKey="FK_InvoiceLineInvoiceId" implied="false" onDeleteCascade="false" schema="dbo" table="InvoiceLine"/>
          </column>
