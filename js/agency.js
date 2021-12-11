@@ -32,6 +32,7 @@
 
     downloadCount();
     numberOfStars();
+    numberOfDockerPull();
 
 })(jQuery); // End of use strict
 
@@ -50,14 +51,33 @@ function downloadCount() {
             }
         }
 
-        $('#downloads_number').text(count);
+        const download_format = numeral(count).format('0a');
+        $('#downloads_number').text(download_format);
     });
 }
 
 function numberOfStars() {
     $.get("https://api.github.com/repos/schemaspy/schemaspy", function(data) 
     {
-        stargazers_count = data['stargazers_count'];
-        $('#stars_number').text(stargazers_count);
+        const stargazers_count = data['stargazers_count'];
+        const stargazers_count_format = numeral(stargazers_count).format('0a');
+        $('#stars_number').text(stargazers_count_format);
     });
+}
+
+async function numberOfDockerPull() {
+    const instance = axios.create({
+        baseURL: "http://localhost:8090",
+        withCredentials: false,
+        headers: {
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+        }
+    })
+
+    const { data } = await instance.get('https://hub.docker.com/v2/repositories/schemaspy/schemaspy/');
+    console.log(data);
+    const docker_pull_count = data.pull_count;
+    const docker_pull_count_format = numeral(docker_pull_count).format('0a');
+    $('#docker_pull_number').text(docker_pull_count_format);
 }
