@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>epitope - epivirusurf Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>epivirusurf</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>epitope</h1><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>The Epitope table describes the epitopes extracted from IEDB.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="epitope_id">epitope_id</span></td>
+                                    <td>serial</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>nextval(&#39;epitope_epitope_id_seq&#39;::regclass)</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="epitope_2697049_e_envelope_.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_e_envelope_.html'>epitope_2697049_e_envelope_</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_m_membrane_.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_m_membrane_.html'>epitope_2697049_m_membrane_</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_n_nucleocap.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_n_nucleocap.html'>epitope_2697049_n_nucleocap</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns3_orf3a_p.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns3_orf3a_p.html'>epitope_2697049_ns3_orf3a_p</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns6_orf6_pr.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns6_orf6_pr.html'>epitope_2697049_ns6_orf6_pr</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns7a_orf7a_.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns7a_orf7a_.html'>epitope_2697049_ns7a_orf7a_</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns7b_orf7b.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns7b_orf7b.html'>epitope_2697049_ns7b_orf7b</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns8_orf8_pr.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns8_orf8_pr.html'>epitope_2697049_ns8_orf8_pr</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp10.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp10.html'>epitope_2697049_nsp10</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp11.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp11.html'>epitope_2697049_nsp11</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp12_rna_d.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp12_rna_d.html'>epitope_2697049_nsp12_rna_d</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp13_helic.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp13_helic.html'>epitope_2697049_nsp13_helic</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp14_3_to_.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp14_3_to_.html'>epitope_2697049_nsp14_3_to_</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp15_endor.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp15_endor.html'>epitope_2697049_nsp15_endor</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp16_2_o_r.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp16_2_o_r.html'>epitope_2697049_nsp16_2_o_r</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp1_leader.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp1_leader.html'>epitope_2697049_nsp1_leader</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp2.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp2.html'>epitope_2697049_nsp2</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp3.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp3.html'>epitope_2697049_nsp3</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp4.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp4.html'>epitope_2697049_nsp4</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp5_3c_lik.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp5_3c_lik.html'>epitope_2697049_nsp5_3c_lik</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp6.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp6.html'>epitope_2697049_nsp6</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp7.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp7.html'>epitope_2697049_nsp7</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp8.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp8.html'>epitope_2697049_nsp8</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp9.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp9.html'>epitope_2697049_nsp9</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_orf10_prote.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_orf10_prote.html'>epitope_2697049_orf10_prote</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_orf1a_polyp.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_orf1a_polyp.html'>epitope_2697049_orf1a_polyp</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_orf1ab_poly.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_orf1ab_poly.html'>epitope_2697049_orf1ab_poly</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_spike_surfa.iedb_epitope_id&#39;s name implies that it&#39;s a child of epitope.epitope_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_spike_surfa.html'>epitope_2697049_spike_surfa</a><span class='relatedKey'>.iedb_epitope_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_fragment.epitope_id references epitope.epitope_id via epitope_fragment_epitope_id_fkey"><a href='epitope_fragment.html'>epitope_fragment</a><span class='relatedKey'>.epitope_id</span></td>
+                                                <td class="constraint detail">epitope_fragment_epitope_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="epitope_iri">epitope_iri</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Identifies the single epitope within the IEDB system (ID) and allows to resort to its information</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="iedb_epitope_id">iedb_epitope_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Identifies the single epitope within the IEDB system (IRI) and allows to resort to its information</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="virus_id">virus_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="epitope.virus_id references virus.virus_id via epitope_virus_id_fkey"><a href='virus.html'>virus</a><span class='relatedKey'>.virus_id</span></td>
+                                                <td class="constraint detail">epitope_virus_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="host_id">host_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="epitope.host_id references host_specie.host_id via epitope_host_id_fkey"><a href='host_specie.html'>host_specie</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">epitope_host_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="protein_name">protein_name</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="cell_type">cell_type</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indicates the target of the experiment (allowing values are &lsquo;T cell&rsquo;, &lsquo;B cell&rsquo;, &lsquo;MHC ligand&rsquo;)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mhc_class">mhc_class</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indicates the general classes of alleles provided in the previous field (possible values are &lsquo;I&rsquo;, &lsquo;II&rsquo;, or &lsquo;I,II&rsquo; if both class I and II alleles are considered)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="response_frequency_pos">response_frequency_pos</span></td>
+                                    <td>float4</td>
+                                    <td>8,8</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>On IEDB this measure is defined as the number of positively responded subjects (R) divided by the total number of those tested (N), summed up by mapped epitopes; however, to compensate for epitopes that are identified by a low number of assays, we employ a corrected formula (proposed in Carrasco et al., 2015), where the importance of corrections decreases as the number of assays increases.</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="epitope_sequence">epitope_sequence</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indicates the general classes of alleles provided in the previous field (possible values are &lsquo;I&rsquo;, &lsquo;II&rsquo;, or &lsquo;I,II&rsquo; if both class I and II alleles are considered).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="epi_annotation_start">epi_annotation_start</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Start coordinate of epitope on protein</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="epi_annotation_stop">epi_annotation_stop</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Stop coordinate of epitope on protein</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="external_link">external_link</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>References the publication where the epitope was first reported (and manually collected by IEDB curation team).</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="prediction_process">prediction_process</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Prediction process used for the epitope (now they are all imported from IEDB)</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="is_linear">is_linear</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Defines continuous (true) or discontinuous (false) epitopes, composed of amino acid residues that may be located on different protein regions &ndash; brought together by protein folding</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="source_host_name">source_host_name</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="source_host_iri">source_host_iri</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="mhc_allele">mhc_allele</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Also referred to as &lsquo;mhc_allele&rsquo;, it indicates the list of the class (e.g., &lsquo;HLA Class I&rsquo;), or lists of alleles (e.g., &lsquo;HLA-B*35:01, HLA-B*15:01&rsquo;) to which the epitope is restricted-this is relevant only for T-cell and MHC Ligand assays</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="assay_type">assay_type</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Indicates the outcome - considering possibly multiple experiments (we have &lsquo;positive&rsquo;, &lsquo;negative&rsquo;, and &lsquo;both&rsquo;, when positive and negative outcomes were included)</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> epitope_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>epitope_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="epitope.html" target="_top" title="epitope" alt="" coords="281,32,701,659">
+<area shape="rect" id="node2" href="host_specie.html" target="_top" title="host_specie" alt="" coords="19,204,224,321">
+<area shape="rect" id="node3" href="virus.html" target="_top" title="virus" alt="" coords="5,69,237,187">
+<area shape="rect" id="node4" href="epitope_fragment.html" target="_top" title="epitope_fragment" alt="" coords="745,5,1025,152">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/epitope.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="epitope.html" target="_top" title="epitope" alt="" coords="281,160,701,787">
+<area shape="rect" id="node2" href="host_specie.html" target="_top" title="host_specie" alt="" coords="19,197,224,315">
+<area shape="rect" id="node3" href="virus.html" target="_top" title="virus" alt="" coords="5,21,237,139">
+<area shape="rect" id="node4" href="epitope_fragment.html" target="_top" title="epitope_fragment" alt="" coords="745,133,1025,280">
+<area shape="rect" id="node5" href="host_sample.html" target="_top" title="host_sample" alt="" coords="407,55,576,143">
+<area shape="rect" id="node6" href="sequence.html" target="_top" title="sequence" alt="" coords="811,5,959,93">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/epitope.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="epitope.html" target="_top" title="epitope" alt="" coords="281,1963,701,2589">
+<area shape="rect" id="node2" href="host_specie.html" target="_top" title="host_specie" alt="" coords="19,2135,224,2252">
+<area shape="rect" id="node3" href="virus.html" target="_top" title="virus" alt="" coords="5,2000,237,2117">
+<area shape="rect" id="node4" href="epitope_2697049_e_envelope_.html" target="_top" title="epitope_2697049_e_envelope_" alt="" coords="755,5,1075,128">
+<area shape="rect" id="node5" href="epitope_2697049_m_membrane_.html" target="_top" title="epitope_2697049_m_membrane_" alt="" coords="745,145,1085,268">
+<area shape="rect" id="node6" href="epitope_2697049_n_nucleocap.html" target="_top" title="epitope_2697049_n_nucleocap" alt="" coords="754,285,1077,408">
+<area shape="rect" id="node7" href="epitope_2697049_ns3_orf3a_p.html" target="_top" title="epitope_2697049_ns3_orf3a_p" alt="" coords="756,425,1075,548">
+<area shape="rect" id="node8" href="epitope_2697049_ns6_orf6_pr.html" target="_top" title="epitope_2697049_ns6_orf6_pr" alt="" coords="757,565,1073,688">
+<area shape="rect" id="node9" href="epitope_2697049_ns7a_orf7a_.html" target="_top" title="epitope_2697049_ns7a_orf7a_" alt="" coords="757,705,1074,828">
+<area shape="rect" id="node10" href="epitope_2697049_ns7b_orf7b.html" target="_top" title="epitope_2697049_ns7b_orf7b" alt="" coords="760,845,1071,968">
+<area shape="rect" id="node11" href="epitope_2697049_ns8_orf8_pr.html" target="_top" title="epitope_2697049_ns8_orf8_pr" alt="" coords="757,985,1073,1108">
+<area shape="rect" id="node12" href="epitope_2697049_nsp10.html" target="_top" title="epitope_2697049_nsp10" alt="" coords="775,1125,1055,1248">
+<area shape="rect" id="node13" href="epitope_2697049_nsp11.html" target="_top" title="epitope_2697049_nsp11" alt="" coords="775,1265,1055,1388">
+<area shape="rect" id="node14" href="epitope_2697049_nsp12_rna_d.html" target="_top" title="epitope_2697049_nsp12_rna_d" alt="" coords="753,1405,1077,1528">
+<area shape="rect" id="node15" href="epitope_2697049_nsp13_helic.html" target="_top" title="epitope_2697049_nsp13_helic" alt="" coords="757,1545,1073,1668">
+<area shape="rect" id="node16" href="epitope_2697049_nsp14_3_to_.html" target="_top" title="epitope_2697049_nsp14_3_to_" alt="" coords="755,1685,1075,1808">
+<area shape="rect" id="node17" href="epitope_2697049_nsp15_endor.html" target="_top" title="epitope_2697049_nsp15_endor" alt="" coords="752,1825,1079,1948">
+<area shape="rect" id="node18" href="epitope_2697049_nsp16_2_o_r.html" target="_top" title="epitope_2697049_nsp16_2_o_r" alt="" coords="755,1965,1075,2088">
+<area shape="rect" id="node19" href="epitope_2697049_nsp1_leader.html" target="_top" title="epitope_2697049_nsp1_leader" alt="" coords="755,2105,1075,2228">
+<area shape="rect" id="node20" href="epitope_2697049_nsp2.html" target="_top" title="epitope_2697049_nsp2" alt="" coords="775,2245,1055,2368">
+<area shape="rect" id="node21" href="epitope_2697049_nsp3.html" target="_top" title="epitope_2697049_nsp3" alt="" coords="775,2385,1055,2508">
+<area shape="rect" id="node22" href="epitope_2697049_nsp4.html" target="_top" title="epitope_2697049_nsp4" alt="" coords="775,2525,1055,2648">
+<area shape="rect" id="node23" href="epitope_2697049_nsp5_3c_lik.html" target="_top" title="epitope_2697049_nsp5_3c_lik" alt="" coords="759,2665,1072,2788">
+<area shape="rect" id="node24" href="epitope_2697049_nsp6.html" target="_top" title="epitope_2697049_nsp6" alt="" coords="775,2805,1055,2928">
+<area shape="rect" id="node25" href="epitope_2697049_nsp7.html" target="_top" title="epitope_2697049_nsp7" alt="" coords="775,2945,1055,3068">
+<area shape="rect" id="node26" href="epitope_2697049_nsp8.html" target="_top" title="epitope_2697049_nsp8" alt="" coords="775,3085,1055,3208">
+<area shape="rect" id="node27" href="epitope_2697049_nsp9.html" target="_top" title="epitope_2697049_nsp9" alt="" coords="775,3225,1055,3348">
+<area shape="rect" id="node28" href="epitope_2697049_orf10_prote.html" target="_top" title="epitope_2697049_orf10_prote" alt="" coords="757,3365,1073,3488">
+<area shape="rect" id="node29" href="epitope_2697049_orf1a_polyp.html" target="_top" title="epitope_2697049_orf1a_polyp" alt="" coords="757,3505,1074,3628">
+<area shape="rect" id="node30" href="epitope_2697049_orf1ab_poly.html" target="_top" title="epitope_2697049_orf1ab_poly" alt="" coords="757,3645,1074,3768">
+<area shape="rect" id="node31" href="epitope_2697049_spike_surfa.html" target="_top" title="epitope_2697049_spike_surfa" alt="" coords="759,3785,1072,3908">
+<area shape="rect" id="node32" href="epitope_fragment.html" target="_top" title="epitope_fragment" alt="" coords="775,3925,1055,4072">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/epitope.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="epitope.html" target="_top" title="epitope" alt="" coords="281,1844,701,2471">
+<area shape="rect" id="node2" href="host_specie.html" target="_top" title="host_specie" alt="" coords="19,83,224,200">
+<area shape="rect" id="node3" href="virus.html" target="_top" title="virus" alt="" coords="5,1075,237,1192">
+<area shape="rect" id="node4" href="epitope_2697049_e_envelope_.html" target="_top" title="epitope_2697049_e_envelope_" alt="" coords="755,2876,1075,2999">
+<area shape="rect" id="node5" href="aminoacid_variant.html" target="_top" title="aminoacid_variant" alt="" coords="387,2488,596,2576">
+<area shape="rect" id="node6" href="epitope_2697049_m_membrane_.html" target="_top" title="epitope_2697049_m_membrane_" alt="" coords="745,3016,1085,3139">
+<area shape="rect" id="node7" href="epitope_2697049_n_nucleocap.html" target="_top" title="epitope_2697049_n_nucleocap" alt="" coords="754,3156,1077,3279">
+<area shape="rect" id="node8" href="epitope_2697049_ns3_orf3a_p.html" target="_top" title="epitope_2697049_ns3_orf3a_p" alt="" coords="756,3296,1075,3419">
+<area shape="rect" id="node9" href="epitope_2697049_ns6_orf6_pr.html" target="_top" title="epitope_2697049_ns6_orf6_pr" alt="" coords="757,3436,1073,3559">
+<area shape="rect" id="node10" href="epitope_2697049_ns7a_orf7a_.html" target="_top" title="epitope_2697049_ns7a_orf7a_" alt="" coords="757,3576,1074,3699">
+<area shape="rect" id="node11" href="epitope_2697049_ns7b_orf7b.html" target="_top" title="epitope_2697049_ns7b_orf7b" alt="" coords="760,3716,1071,3839">
+<area shape="rect" id="node12" href="epitope_2697049_ns8_orf8_pr.html" target="_top" title="epitope_2697049_ns8_orf8_pr" alt="" coords="757,3856,1073,3979">
+<area shape="rect" id="node13" href="epitope_2697049_nsp10.html" target="_top" title="epitope_2697049_nsp10" alt="" coords="775,3996,1055,4119">
+<area shape="rect" id="node14" href="epitope_2697049_nsp11.html" target="_top" title="epitope_2697049_nsp11" alt="" coords="775,4136,1055,4259">
+<area shape="rect" id="node15" href="epitope_2697049_nsp12_rna_d.html" target="_top" title="epitope_2697049_nsp12_rna_d" alt="" coords="753,356,1077,479">
+<area shape="rect" id="node16" href="epitope_2697049_nsp13_helic.html" target="_top" title="epitope_2697049_nsp13_helic" alt="" coords="757,496,1073,619">
+<area shape="rect" id="node17" href="epitope_2697049_nsp14_3_to_.html" target="_top" title="epitope_2697049_nsp14_3_to_" alt="" coords="755,636,1075,759">
+<area shape="rect" id="node18" href="epitope_2697049_nsp15_endor.html" target="_top" title="epitope_2697049_nsp15_endor" alt="" coords="752,776,1079,899">
+<area shape="rect" id="node19" href="epitope_2697049_nsp16_2_o_r.html" target="_top" title="epitope_2697049_nsp16_2_o_r" alt="" coords="755,916,1075,1039">
+<area shape="rect" id="node20" href="epitope_2697049_nsp1_leader.html" target="_top" title="epitope_2697049_nsp1_leader" alt="" coords="755,1056,1075,1179">
+<area shape="rect" id="node21" href="epitope_2697049_nsp2.html" target="_top" title="epitope_2697049_nsp2" alt="" coords="775,1196,1055,1319">
+<area shape="rect" id="node22" href="epitope_2697049_nsp3.html" target="_top" title="epitope_2697049_nsp3" alt="" coords="775,1336,1055,1459">
+<area shape="rect" id="node23" href="epitope_2697049_nsp4.html" target="_top" title="epitope_2697049_nsp4" alt="" coords="775,1476,1055,1599">
+<area shape="rect" id="node24" href="epitope_2697049_nsp5_3c_lik.html" target="_top" title="epitope_2697049_nsp5_3c_lik" alt="" coords="759,1616,1072,1739">
+<area shape="rect" id="node25" href="epitope_2697049_nsp6.html" target="_top" title="epitope_2697049_nsp6" alt="" coords="775,1756,1055,1879">
+<area shape="rect" id="node26" href="epitope_2697049_nsp7.html" target="_top" title="epitope_2697049_nsp7" alt="" coords="775,1896,1055,2019">
+<area shape="rect" id="node27" href="epitope_2697049_nsp8.html" target="_top" title="epitope_2697049_nsp8" alt="" coords="775,2036,1055,2159">
+<area shape="rect" id="node28" href="epitope_2697049_nsp9.html" target="_top" title="epitope_2697049_nsp9" alt="" coords="775,2176,1055,2299">
+<area shape="rect" id="node29" href="epitope_2697049_orf10_prote.html" target="_top" title="epitope_2697049_orf10_prote" alt="" coords="757,2316,1073,2439">
+<area shape="rect" id="node30" href="epitope_2697049_orf1a_polyp.html" target="_top" title="epitope_2697049_orf1a_polyp" alt="" coords="757,2456,1074,2579">
+<area shape="rect" id="node31" href="epitope_2697049_orf1ab_poly.html" target="_top" title="epitope_2697049_orf1ab_poly" alt="" coords="757,2596,1074,2719">
+<area shape="rect" id="node32" href="epitope_2697049_spike_surfa.html" target="_top" title="epitope_2697049_spike_surfa" alt="" coords="759,2736,1072,2859">
+<area shape="rect" id="node33" href="epitope_fragment.html" target="_top" title="epitope_fragment" alt="" coords="775,192,1055,339">
+<area shape="rect" id="node34" href="host_sample.html" target="_top" title="host_sample" alt="" coords="407,85,576,173">
+<area shape="rect" id="node35" href="host_sample_view.html" target="_top" title="host_sample_view" alt="" coords="812,5,1019,69">
+<area shape="rect" id="node36" href="sequence.html" target="_top" title="sequence" alt="" coords="841,87,989,175">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/epitope.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

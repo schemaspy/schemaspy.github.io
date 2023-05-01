@@ -1,0 +1,14 @@
+annotation_sequence
+variant_impact
+nucleotide_sequence
+epitope_fragment
+aminoacid_variant
+nucleotide_variant
+annotation
+sequence
+host_sample
+epitope
+sequencing_project
+experiment_type
+virus
+host_specie
