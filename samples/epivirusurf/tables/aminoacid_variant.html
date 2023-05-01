@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>aminoacid_variant - epivirusurf Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>epivirusurf</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>aminoacid_variant</h1><br />
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-file-text-o"></i>
+                            <h3 id="Description" class="box-title">Description</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div><!-- /.box-header -->
+                        <div class="box-body clearfix">
+                            <p>The Aminoacid Variant table contains subsequences of proteins (i.e., only of a subset of all annotations) that differ from the reference amino acid sequence of the virus species.</p>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="aminoacid_variant_id">aminoacid_variant_id</span></td>
+                                    <td>serial</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>nextval(&#39;aminoacid_variant_aminoacid_variant_id_seq&#39;::regclass)</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="epitope_2697049_e_envelope_.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_e_envelope_.html'>epitope_2697049_e_envelope_</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_m_membrane_.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_m_membrane_.html'>epitope_2697049_m_membrane_</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_n_nucleocap.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_n_nucleocap.html'>epitope_2697049_n_nucleocap</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns3_orf3a_p.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns3_orf3a_p.html'>epitope_2697049_ns3_orf3a_p</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns6_orf6_pr.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns6_orf6_pr.html'>epitope_2697049_ns6_orf6_pr</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns7a_orf7a_.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns7a_orf7a_.html'>epitope_2697049_ns7a_orf7a_</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns7b_orf7b.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns7b_orf7b.html'>epitope_2697049_ns7b_orf7b</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_ns8_orf8_pr.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_ns8_orf8_pr.html'>epitope_2697049_ns8_orf8_pr</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp10.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp10.html'>epitope_2697049_nsp10</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp11.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp11.html'>epitope_2697049_nsp11</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp12_rna_d.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp12_rna_d.html'>epitope_2697049_nsp12_rna_d</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp13_helic.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp13_helic.html'>epitope_2697049_nsp13_helic</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp14_3_to_.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp14_3_to_.html'>epitope_2697049_nsp14_3_to_</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp15_endor.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp15_endor.html'>epitope_2697049_nsp15_endor</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp16_2_o_r.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp16_2_o_r.html'>epitope_2697049_nsp16_2_o_r</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp1_leader.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp1_leader.html'>epitope_2697049_nsp1_leader</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp2.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp2.html'>epitope_2697049_nsp2</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp3.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp3.html'>epitope_2697049_nsp3</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp4.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp4.html'>epitope_2697049_nsp4</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp5_3c_lik.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp5_3c_lik.html'>epitope_2697049_nsp5_3c_lik</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp6.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp6.html'>epitope_2697049_nsp6</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp7.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp7.html'>epitope_2697049_nsp7</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp8.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp8.html'>epitope_2697049_nsp8</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_nsp9.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_nsp9.html'>epitope_2697049_nsp9</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_orf10_prote.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_orf10_prote.html'>epitope_2697049_orf10_prote</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_orf1a_polyp.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_orf1a_polyp.html'>epitope_2697049_orf1a_polyp</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_orf1ab_poly.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_orf1ab_poly.html'>epitope_2697049_orf1ab_poly</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="epitope_2697049_spike_surfa.aminoacid_variant_id&#39;s name implies that it&#39;s a child of aminoacid_variant.aminoacid_variant_id, but it doesn&#39;t reference that column."><a href='epitope_2697049_spike_surfa.html'>epitope_2697049_spike_surfa</a><span class='relatedKey'>.aminoacid_variant_id</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="annotation_id">annotation_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aminoacid_variant.annotation_id references annotation.annotation_id via aminoacid_variant_annotation_id_fkey"><a href='annotation.html'>annotation</a><span class='relatedKey'>.annotation_id</span></td>
+                                                <td class="constraint detail">aminoacid_variant_annotation_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sequence_aa_original">sequence_aa_original</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Affected amino acid sequence from the corresponding reference sequence of the chosen Virus</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="sequence_aa_alternative">sequence_aa_alternative</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Changed amino acid sequence (in the target sequence) with respect to the reference one</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="start_aa_original">start_aa_original</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Coordinate where the change starts on the reference sequrence</p></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="variant_aa_length">variant_aa_length</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Length of amino acid change in units of impacted residues</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="variant_aa_type">variant_aa_type</span></td>
+                                    <td>varchar</td>
+                                    <td>2147483647</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Type of amino acid change (SUB = substitution, INS = insertion, DEL = deletion)</p></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> aminoacid_variant_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>aminoacid_variant_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>aa__ann_id</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>annotation_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>aa__start_original</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>start_aa_original</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>aa__var_type_lower</td>
+                                    <td>Performance</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>aa__var_type_normal</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>variant_aa_type</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="aminoacid_variant.html" target="_top" title="aminoacid_variant" alt="" coords="268,5,689,280">
+<area shape="rect" id="node2" href="annotation.html" target="_top" title="annotation" alt="" coords="5,37,224,243">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/aminoacid_variant.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="aminoacid_variant.html" target="_top" title="aminoacid_variant" alt="" coords="460,5,881,280">
+<area shape="rect" id="node2" href="annotation.html" target="_top" title="annotation" alt="" coords="197,112,416,317">
+<area shape="rect" id="node3" href="sequence.html" target="_top" title="sequence" alt="" coords="5,221,153,309">
+<area shape="rect" id="node4" href="annotation_sequence.html" target="_top" title="annotation_sequence" alt="" coords="555,297,786,385">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/aminoacid_variant.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="aminoacid_variant.html" target="_top" title="aminoacid_variant" alt="" coords="268,1923,689,2197">
+<area shape="rect" id="node2" href="annotation.html" target="_top" title="annotation" alt="" coords="5,1955,224,2160">
+<area shape="rect" id="node3" href="epitope_2697049_e_envelope_.html" target="_top" title="epitope_2697049_e_envelope_" alt="" coords="743,5,1063,128">
+<area shape="rect" id="node4" href="epitope_2697049_m_membrane_.html" target="_top" title="epitope_2697049_m_membrane_" alt="" coords="733,145,1073,268">
+<area shape="rect" id="node5" href="epitope_2697049_n_nucleocap.html" target="_top" title="epitope_2697049_n_nucleocap" alt="" coords="742,285,1065,408">
+<area shape="rect" id="node6" href="epitope_2697049_ns3_orf3a_p.html" target="_top" title="epitope_2697049_ns3_orf3a_p" alt="" coords="744,425,1063,548">
+<area shape="rect" id="node7" href="epitope_2697049_ns6_orf6_pr.html" target="_top" title="epitope_2697049_ns6_orf6_pr" alt="" coords="745,565,1061,688">
+<area shape="rect" id="node8" href="epitope_2697049_ns7a_orf7a_.html" target="_top" title="epitope_2697049_ns7a_orf7a_" alt="" coords="745,705,1062,828">
+<area shape="rect" id="node9" href="epitope_2697049_ns7b_orf7b.html" target="_top" title="epitope_2697049_ns7b_orf7b" alt="" coords="748,845,1059,968">
+<area shape="rect" id="node10" href="epitope_2697049_ns8_orf8_pr.html" target="_top" title="epitope_2697049_ns8_orf8_pr" alt="" coords="745,985,1061,1108">
+<area shape="rect" id="node11" href="epitope_2697049_nsp10.html" target="_top" title="epitope_2697049_nsp10" alt="" coords="763,1125,1043,1248">
+<area shape="rect" id="node12" href="epitope_2697049_nsp11.html" target="_top" title="epitope_2697049_nsp11" alt="" coords="763,1265,1043,1388">
+<area shape="rect" id="node13" href="epitope_2697049_nsp12_rna_d.html" target="_top" title="epitope_2697049_nsp12_rna_d" alt="" coords="741,1405,1065,1528">
+<area shape="rect" id="node14" href="epitope_2697049_nsp13_helic.html" target="_top" title="epitope_2697049_nsp13_helic" alt="" coords="745,1545,1061,1668">
+<area shape="rect" id="node15" href="epitope_2697049_nsp14_3_to_.html" target="_top" title="epitope_2697049_nsp14_3_to_" alt="" coords="743,1685,1063,1808">
+<area shape="rect" id="node16" href="epitope_2697049_nsp15_endor.html" target="_top" title="epitope_2697049_nsp15_endor" alt="" coords="740,1825,1067,1948">
+<area shape="rect" id="node17" href="epitope_2697049_nsp16_2_o_r.html" target="_top" title="epitope_2697049_nsp16_2_o_r" alt="" coords="743,1965,1063,2088">
+<area shape="rect" id="node18" href="epitope_2697049_nsp1_leader.html" target="_top" title="epitope_2697049_nsp1_leader" alt="" coords="743,2105,1063,2228">
+<area shape="rect" id="node19" href="epitope_2697049_nsp2.html" target="_top" title="epitope_2697049_nsp2" alt="" coords="763,2245,1043,2368">
+<area shape="rect" id="node20" href="epitope_2697049_nsp3.html" target="_top" title="epitope_2697049_nsp3" alt="" coords="763,2385,1043,2508">
+<area shape="rect" id="node21" href="epitope_2697049_nsp4.html" target="_top" title="epitope_2697049_nsp4" alt="" coords="763,2525,1043,2648">
+<area shape="rect" id="node22" href="epitope_2697049_nsp5_3c_lik.html" target="_top" title="epitope_2697049_nsp5_3c_lik" alt="" coords="747,2665,1060,2788">
+<area shape="rect" id="node23" href="epitope_2697049_nsp6.html" target="_top" title="epitope_2697049_nsp6" alt="" coords="763,2805,1043,2928">
+<area shape="rect" id="node24" href="epitope_2697049_nsp7.html" target="_top" title="epitope_2697049_nsp7" alt="" coords="763,2945,1043,3068">
+<area shape="rect" id="node25" href="epitope_2697049_nsp8.html" target="_top" title="epitope_2697049_nsp8" alt="" coords="763,3085,1043,3208">
+<area shape="rect" id="node26" href="epitope_2697049_nsp9.html" target="_top" title="epitope_2697049_nsp9" alt="" coords="763,3225,1043,3348">
+<area shape="rect" id="node27" href="epitope_2697049_orf10_prote.html" target="_top" title="epitope_2697049_orf10_prote" alt="" coords="745,3365,1061,3488">
+<area shape="rect" id="node28" href="epitope_2697049_orf1a_polyp.html" target="_top" title="epitope_2697049_orf1a_polyp" alt="" coords="745,3505,1062,3628">
+<area shape="rect" id="node29" href="epitope_2697049_orf1ab_poly.html" target="_top" title="epitope_2697049_orf1ab_poly" alt="" coords="745,3645,1062,3768">
+<area shape="rect" id="node30" href="epitope_2697049_spike_surfa.html" target="_top" title="epitope_2697049_spike_surfa" alt="" coords="747,3785,1060,3908">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/aminoacid_variant.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="aminoacid_variant.html" target="_top" title="aminoacid_variant" alt="" coords="460,2016,881,2291">
+<area shape="rect" id="node2" href="annotation.html" target="_top" title="annotation" alt="" coords="197,1984,416,2189">
+<area shape="rect" id="node3" href="sequence.html" target="_top" title="sequence" alt="" coords="5,1964,153,2052">
+<area shape="rect" id="node4" href="annotation_sequence.html" target="_top" title="annotation_sequence" alt="" coords="555,1911,786,1999">
+<area shape="rect" id="node5" href="epitope_2697049_e_envelope_.html" target="_top" title="epitope_2697049_e_envelope_" alt="" coords="935,845,1255,968">
+<area shape="rect" id="node6" href="epitope.html" target="_top" title="epitope" alt="" coords="604,1805,737,1893">
+<area shape="rect" id="node7" href="epitope_2697049_m_membrane_.html" target="_top" title="epitope_2697049_m_membrane_" alt="" coords="925,985,1265,1108">
+<area shape="rect" id="node8" href="epitope_2697049_n_nucleocap.html" target="_top" title="epitope_2697049_n_nucleocap" alt="" coords="934,1125,1257,1248">
+<area shape="rect" id="node9" href="epitope_2697049_ns3_orf3a_p.html" target="_top" title="epitope_2697049_ns3_orf3a_p" alt="" coords="936,1265,1255,1388">
+<area shape="rect" id="node10" href="epitope_2697049_ns6_orf6_pr.html" target="_top" title="epitope_2697049_ns6_orf6_pr" alt="" coords="937,1405,1253,1528">
+<area shape="rect" id="node11" href="epitope_2697049_ns7a_orf7a_.html" target="_top" title="epitope_2697049_ns7a_orf7a_" alt="" coords="937,1545,1254,1668">
+<area shape="rect" id="node12" href="epitope_2697049_ns7b_orf7b.html" target="_top" title="epitope_2697049_ns7b_orf7b" alt="" coords="940,1685,1251,1808">
+<area shape="rect" id="node13" href="epitope_2697049_ns8_orf8_pr.html" target="_top" title="epitope_2697049_ns8_orf8_pr" alt="" coords="937,1825,1253,1948">
+<area shape="rect" id="node14" href="epitope_2697049_nsp10.html" target="_top" title="epitope_2697049_nsp10" alt="" coords="955,1965,1235,2088">
+<area shape="rect" id="node15" href="epitope_2697049_nsp11.html" target="_top" title="epitope_2697049_nsp11" alt="" coords="955,2105,1235,2228">
+<area shape="rect" id="node16" href="epitope_2697049_nsp12_rna_d.html" target="_top" title="epitope_2697049_nsp12_rna_d" alt="" coords="933,2245,1257,2368">
+<area shape="rect" id="node17" href="epitope_2697049_nsp13_helic.html" target="_top" title="epitope_2697049_nsp13_helic" alt="" coords="937,2385,1253,2508">
+<area shape="rect" id="node18" href="epitope_2697049_nsp14_3_to_.html" target="_top" title="epitope_2697049_nsp14_3_to_" alt="" coords="935,2525,1255,2648">
+<area shape="rect" id="node19" href="epitope_2697049_nsp15_endor.html" target="_top" title="epitope_2697049_nsp15_endor" alt="" coords="932,2665,1259,2788">
+<area shape="rect" id="node20" href="epitope_2697049_nsp16_2_o_r.html" target="_top" title="epitope_2697049_nsp16_2_o_r" alt="" coords="935,2805,1255,2928">
+<area shape="rect" id="node21" href="epitope_2697049_nsp1_leader.html" target="_top" title="epitope_2697049_nsp1_leader" alt="" coords="935,2945,1255,3068">
+<area shape="rect" id="node22" href="epitope_2697049_nsp2.html" target="_top" title="epitope_2697049_nsp2" alt="" coords="955,3085,1235,3208">
+<area shape="rect" id="node23" href="epitope_2697049_nsp3.html" target="_top" title="epitope_2697049_nsp3" alt="" coords="955,3225,1235,3348">
+<area shape="rect" id="node24" href="epitope_2697049_nsp4.html" target="_top" title="epitope_2697049_nsp4" alt="" coords="955,3365,1235,3488">
+<area shape="rect" id="node25" href="epitope_2697049_nsp5_3c_lik.html" target="_top" title="epitope_2697049_nsp5_3c_lik" alt="" coords="939,3505,1252,3628">
+<area shape="rect" id="node26" href="epitope_2697049_nsp6.html" target="_top" title="epitope_2697049_nsp6" alt="" coords="955,3645,1235,3768">
+<area shape="rect" id="node27" href="epitope_2697049_nsp7.html" target="_top" title="epitope_2697049_nsp7" alt="" coords="955,3785,1235,3908">
+<area shape="rect" id="node28" href="epitope_2697049_nsp8.html" target="_top" title="epitope_2697049_nsp8" alt="" coords="955,5,1235,128">
+<area shape="rect" id="node29" href="epitope_2697049_nsp9.html" target="_top" title="epitope_2697049_nsp9" alt="" coords="955,145,1235,268">
+<area shape="rect" id="node30" href="epitope_2697049_orf10_prote.html" target="_top" title="epitope_2697049_orf10_prote" alt="" coords="937,285,1253,408">
+<area shape="rect" id="node31" href="epitope_2697049_orf1a_polyp.html" target="_top" title="epitope_2697049_orf1a_polyp" alt="" coords="937,425,1254,548">
+<area shape="rect" id="node32" href="epitope_2697049_orf1ab_poly.html" target="_top" title="epitope_2697049_orf1ab_poly" alt="" coords="937,565,1254,688">
+<area shape="rect" id="node33" href="epitope_2697049_spike_surfa.html" target="_top" title="epitope_2697049_spike_surfa" alt="" coords="939,705,1252,828">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/aminoacid_variant.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
